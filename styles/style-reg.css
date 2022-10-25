@@ -343,3 +343,127 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, input[ty
 #required_fields {
     font-size: 0.7em;
 }
+
+.notification {
+    position: fixed;
+    left: 95%;
+    top: 120px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 1.2s;
+    animation-name: rectangle-to-circle;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-duration: 1.2s;
+}
+
+.notification:hover {
+    left: calc(95% - 200px);
+    
+    animation-name: circle-to-rectangle;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-duration: 1.2s;
+}
+
+.notification:hover .notification-header
+{
+    width: 100%;
+    background-color: blueviolet;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.notification:hover .dropdown-items {
+    transition: 1.2s ease-out;
+    transform: scale(100%);
+}
+
+.notification .notification-header {
+    width: 100%;
+    transition: 1.2s;
+    display: flex;
+    justify-content: start;
+    padding: 10px 0 10px 0;
+}
+
+.notification-header img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.notification .dropdown-items {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: 0.5s ease;
+    transform: scale(0);
+}
+
+.item-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #fff;
+    justify-items: center;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.item:hover .item-circle {
+    color: blueviolet;
+}
+
+.dropdown-items .item {
+    height: 40px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    transition: 0.7s;
+}
+
+.dropdown-items .item:hover {
+    transform: scale(105%);
+    color: white;
+    background-color: blueviolet;
+    border-radius: 10px;
+}
+
+@keyframes circle-to-rectangle {
+    from {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    to {
+        box-shadow: 0 10px 10px 2px rgba(122, 122, 122, 0.5);
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+    }
+}
+
+@keyframes rectangle-to-circle {
+    from {
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+    }
+    to {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+
+    }
+}
