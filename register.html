@@ -46,7 +46,12 @@
 
     <main>
 
-    <p id="already_have_account">Уже есть аккаунт? <a href="https://lk.mirea.ru">Войти</a></p>
+    <div class="already_have_account">
+        <button class="btn-animated btn-log-in">
+            <a href="https://lk.mirea.ru"><span>Войти!</span></a>
+            <span>Уже есть аккаунт?</span>
+        </button>
+    </div>
 
     <div id="reg_window">
         <form acrion="" method="get">
@@ -139,10 +144,12 @@
                     <p id="required_fields">* - поля, обязательные для заполнения</p>
                 <div class="double_element">
                     <div class="elem_form">
-                        <input type="submit" name="submit" value="Зарегистрироваться" required>
+                        <button class="btn-animated btn-submit" type="submit">
+                            <span>Зарегистрироваться</span>
+                        </button>
                     </div>
                     <div class="elem_form right">
-                        <button type="reset" name="reset">Сброс формы</button>
+                        <button class="btn-animated btn-reset" type="reset">Сброс</button>
                     </div>
                 </div>
                 </div>

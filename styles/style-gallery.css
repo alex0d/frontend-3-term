@@ -70,3 +70,55 @@ img {
     font-size: 13px;
     padding-top: 100px;
 }
+
+.btn-animated {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 10px 0 10px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    position: relative;
+    outline: none;
+}
+
+.btn-add-image {
+    width: fit-content;
+    height: 40px;
+    line-height: 42px;
+    border: none;
+    background: transparent;
+}
+.btn-add-image:hover {
+    color: lightblue;
+    background: transparent;
+    box-shadow:none;
+}
+.btn-add-image:before,
+.btn-add-image:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: gold;
+    transition:400ms ease all;
+}
+.btn-add-image:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+.btn-add-image:hover:before,
+.btn-add-image:hover:after{
+    width:100%;
+    transition:800ms ease all;
+}
