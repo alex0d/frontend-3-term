@@ -12,4 +12,47 @@
     background-color: white;
 }
 
+.video-wrapper {
+    position: relative;
+}
 
+.overlay-header {
+    background-color: black;
+    /*display: none;*/
+    opacity: 0;
+    color: white;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 10px;
+    left: 170px;
+    overflow: hidden;
+}
+
+.overlay-header:hover,
+.video:hover + .overlay-header {
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 170px;
+    left: -20px;
+    transition: all 0.5s ease-out;
+}
+
+@keyframes show-video-description {
+    from {
+        position: absolute;
+        transform: translateX(-100%);
+    }
+    to {
+        z-index: 99;
+        position: absolute;
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 15px;
+        margin: 0;
+        border-bottom: 2px solid #c9c9c9;
+        transform: translateX(0);
+    }
+}
