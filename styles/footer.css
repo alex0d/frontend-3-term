@@ -1,0 +1,69 @@
+:root {
+    --social-media-button-size: 1.5rem;
+}
+
+.contact-footer {
+    padding-left: 15px;
+    left: 0;
+    width: 100%;
+    position: inherit;
+    align-items: center;
+}
+
+.contact-footer h3 {
+    margin: 20px 0 5px 0;
+}
+
+.contact-footer p {
+    margin: 5px;
+}
+
+.container-social-media-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+.container-single-social-media-button {
+    position: relative;
+    display: flex;
+    width: var(--social-media-button-size);
+    height: var(--social-media-button-size);
+    border-radius: 50%;
+    padding: 0.7rem;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+}
+.container-single-social-media-button::before {
+    position: absolute;
+    content: '';
+    top: -150%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, rgba(255,0,245,1) 0%, rgba(250,133,118,1) 70%, rgba(245,255,0,1) 100%);
+    z-index: -1;
+    transition: all .7s;
+    border-radius: 50%;
+    filter: blur(5px);
+}
+.container-single-social-media-button:hover::before {
+    top: 0%;
+    transition: all .7s;
+}
+.social-media-button {
+    justify-self: center;
+    align-self: center;
+}
+.pic-social-media{
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width:767px) {
+    .container-social-media-buttons{
+        flex-wrap: wrap;
+    }
+    .container-social-media-buttons a{
+        margin: 0.5rem;
+    }
+}

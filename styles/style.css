@@ -76,14 +76,6 @@ section h2 {
     border-radius: 10px;
 }
 
-.contactFooter {
-    padding-left: 15px;
-    left: 0;
-    width: 100%;
-    position: inherit;
-    align-items: center;
-}
-
 #comet_image, #asteroid_image {
     float: left;
     margin: 0 10px 10px 0;
@@ -96,9 +88,9 @@ section h2 {
 }
 
 #arrow_up {
-    position: sticky;
+    position: fixed;
     float: right;
-    bottom: 0;
+    bottom: 15px;
     right: 0;
     margin-right: 30px;
 }
