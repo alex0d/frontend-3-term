@@ -26,11 +26,44 @@ html {
 body {
     margin: 0;
     background-color: white;
-    display: inline;
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "aside  navigation ads"
+    "aside main ads"
+    "footer footer footer";
+    grid-template-columns: 150px auto 150px;
+    grid-template-rows: auto 150px auto 1fr;
+    grid-gap: 5px 5px;
 }
 
-#content_nav, .beginning {
-    margin-left: 15px;
+.header {
+    /*background-color: aquamarine;*/
+    grid-area: header;
+}
+
+#content_nav {
+    /*background-color: darkgreen;*/
+    grid-area: navigation;
+}
+
+.contentBlock {
+    /*background-color: #242930;*/
+    grid-area: main;
+}
+
+.aside {
+    /*background-color:blue;*/
+    grid-area: aside;
+}
+
+.ads {
+    /*background-color: blueviolet;*/
+    grid-area: ads;
+}
+
+.footer {
+    grid-area: footer;
 }
 
 section h2 {
@@ -63,11 +96,6 @@ section h2 {
     align-items: center;
 }
 
-.contentBlock {
-    margin-right: 7px;
-    display: block;
-}
-
 .article {
     margin: 5px;
     padding: 0 5px 2px;
@@ -93,4 +121,65 @@ section h2 {
     bottom: 15px;
     right: 0;
     margin-right: 30px;
+}
+
+/*Tablets*/
+@media (max-width:992px) {
+    body{
+        display: grid;
+        grid-template-areas:
+        "header header"
+        "navigation navigation"
+        "aside main"
+        "ads footer";
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: auto 150px auto auto;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .long_long_img{
+        grid-column: span 3
+    }
+}
+
+/*Mobile*/
+@media (max-width:767px) {
+    body {
+        display: grid;
+        grid-template-areas:
+        "header"
+        "navigation"
+        "main"
+        "aside"
+        "ads"
+        "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 150px auto 1fr 1fr auto;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: none;
+    }
+
+    .long_long_img{
+        grid-column: span 1
+    }
+    .long_img{
+        grid-column: span 1
+    }
+    .height_img {
+        grid-row: span 1;
+    }
+
+    .form{
+        grid-template-columns: 1fr;
+    }
+    .form__long_text {
+        grid-column: span 1;
+    }
 }

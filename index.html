@@ -11,7 +11,7 @@
     <title>Астероиды и кометы</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <nav class="header_navigation">
             <div class="logo_title">
                 <img src="logo.png" alt="Астероиды и кометы">
@@ -43,16 +43,16 @@
         </nav>
     </header>
 
-    <img id="title_image" src="images/Asteroid-And-Comet.jpg"
-     width="635"
-     height="215"
-     alt="Чем астероиды отличаются от комет?"
-     usemap="#shapes">
-    <map name="shapes">
-        <area alt="Астероид" title="Астероид" href="#what-is-asteroid" coords="100,132,61" shape="circle">
-        <area alt="Чем отличаются астероиды от комет?" title="" href="#intro" coords="488,8,140,32" shape="rect">
-        <area alt="Комета" title="Комета" href="#what-is-comet" coords="343,155,362,176,395,180,457,174,535,126,622,56,622,33,539,35,467,56,407,79,367,105,349,128" shape="poly">
-    </map>
+<!--    <img id="title_image" src="images/Asteroid-And-Comet.jpg"-->
+<!--     width="635"-->
+<!--     height="215"-->
+<!--     alt="Чем астероиды отличаются от комет?"-->
+<!--     usemap="#shapes">-->
+<!--    <map name="shapes">-->
+<!--        <area alt="Астероид" title="Астероид" href="#what-is-asteroid" coords="100,132,61" shape="circle">-->
+<!--        <area alt="Чем отличаются астероиды от комет?" title="" href="#intro" coords="488,8,140,32" shape="rect">-->
+<!--        <area alt="Комета" title="Комета" href="#what-is-comet" coords="343,155,362,176,395,180,457,174,535,126,622,56,622,33,539,35,467,56,407,79,367,105,349,128" shape="poly">-->
+<!--    </map>-->
 
     <nav id="content_nav">
         <p>Содержание:</p>
@@ -64,6 +64,19 @@
             <li><a href="#asteroid-types">Типы астероидов</a></li>
         </ul>
     </nav>
+
+    <aside class="aside">
+        Каталог небесных тел
+        <ul>
+            <li><a href="comets/comet1.html">Комета 1</a></li>
+            <li><a href="comets/comet2.html">Комета 2</a></li>
+            <li><a href="comets/comet3.html">Комета 3</a></li>
+        </ul>
+    </aside>
+
+    <aside class="ads">
+        Реклама (дорого)
+    </aside>
 
     <main class="contentBlock">
 
@@ -206,51 +219,83 @@
         </article>
     </main>
 
-    <footer class="contact-footer">
-        <h3>Контакты:</h3>
-
-        <div class="container-social-media-buttons">
-            <a href="https://github.com/alex0d">
-                <div class="container-single-social-media-button">
-                    <div class="social-media-button">
-                        <img class="pic-social-media" src="images/social-media-icons/github.png" alt="">
+    <footer class="footer">
+        <div class="footer__container">
+            <h3 class="title-h3">О нас</h3>
+            <p>Алексей Денисов | ИКБО-01-21</p>
+            <p>МИРЭА - Российский технологический университет</p>
+            <div class="container-social-media-buttons">
+                <a href="https://github.com/alex0d">
+                    <div class="container-single-social-media-button">
+                        <div class="social-media-button">
+                            <img class="pic-social-media" src="images/social-media-icons/github.png" alt="">
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="https://t.me/alxq0">
-                <div class="container-single-social-media-button">
-                    <div class="social-media-button">
-                        <img class="pic-social-media" src="images/social-media-icons/tg.png" alt="">
+                </a>
+                <a href="https://t.me/alxq0">
+                    <div class="container-single-social-media-button">
+                        <div class="social-media-button">
+                            <img class="pic-social-media" src="images/social-media-icons/tg.png" alt="">
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="container-single-social-media-button">
-                    <div class="social-media-button">
-                        <img class="pic-social-media" src="images/social-media-icons/twitter.png" alt="">
+                </a>
+                <a href="">
+                    <div class="container-single-social-media-button">
+                        <div class="social-media-button">
+                            <img class="pic-social-media" src="images/social-media-icons/twitter.png" alt="">
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="container-single-social-media-button">
-                    <div class="social-media-button">
-                        <img class="pic-social-media" src="images/social-media-icons/vk.png" alt="">
+                </a>
+                <a href="">
+                    <div class="container-single-social-media-button">
+                        <div class="social-media-button">
+                            <img class="pic-social-media" src="images/social-media-icons/vk.png" alt="">
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="container-single-social-media-button">
-                    <div class="social-media-button">
-                        <img class="pic-social-media" src="images/social-media-icons/youtube.png" alt="">
+                </a>
+                <a href="">
+                    <div class="container-single-social-media-button">
+                        <div class="social-media-button">
+                            <img class="pic-social-media" src="images/social-media-icons/youtube.png" alt="">
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
-
-        <p><small>Copyright 2022 Aleksey Denisov. All Rights Reserved.</small></p>
+        <div class="footer__container">
+            <h3 class="title-h3">Важное</h3>
+            <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Ответы на вопросы</a></li>
+                <li><a href="#">Политика конфиденциальности</a></li>
+                <li><a href="#">Помощь</a></li>
+                <li><a href="#">Правила и положения</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="footer__container">
+            <h3 class="title-h3">Разделы</h3>
+            <ul>
+                <li><a href="#">Астероиды</a></li>
+                <li><a href="#">Кометы</a></li>
+                <li><a href="#">Все небесные тела</a></li>
+                <li><a href="#">Не все небесные тела</a></li>
+                <li><a href="#">Еще какой-то пункт</a></li>
+                <li><a href="#">И последний</a></li>
+            </ul>
+        </div>
+        <div class="footer__container">
+            <h3 class="title-h3">Контакты</h3>
+            <ul>
+                <li><a href="mailto:alexey.d707@gmail.com">Написать</a></li>
+                <li><a href="tel:+">Позвонить</a></li>
+            </ul>
+        </div>
     </footer>
 
-    <a href="#"><img id="arrow_up" src="images/arrow.png" width="30px" height="30px" alt="Наверх"></a>
+<!--    <a href="#">-->
+<!--        <img id="arrow_up" src="images/arrow.png" width="30px" height="30px" alt="Наверх">-->
+<!--    </a>-->
 
 </body>
 </html>

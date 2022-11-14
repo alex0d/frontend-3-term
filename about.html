@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.png" sizes="any">
-    <link rel="stylesheet" href="styles/style.css">
+<!--    <link rel="stylesheet" href="styles/style.css">-->
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/style-about.css">
@@ -46,7 +46,7 @@
     </header>
 
     <main>
-        <div class="main_div">
+        <div class="content">
             <h1>О сайте</h1>
             <p>Этот сайт создан для того, чтобы люди могли узнать больше о кометах и астероидах.</p>
             <p>На сайте есть каталог небесных тел, где вы можете узнать больше о каждом из них.</p>
@@ -61,61 +61,119 @@
                        controls
                        muted
                        preload="metadata"
-                       width="720px" height="405px"
                        poster="images/video_poster.jpg"
                        style="display: block; margin: auto"></video>
-                <div class="overlay-header">
-                    <h3>Метеор? Метеорит? Комета? Астероид?</h3>
-                    <p>Посмотри видео и узнай, чем они отличаются!</p>
-                </div>
+<!--                <div class="overlay-header">-->
+<!--                    <h3>Метеор? Метеорит? Комета? Астероид?</h3>-->
+<!--                    <p>Посмотри видео и узнай, чем они отличаются!</p>-->
+<!--                </div>-->
+            </div>
+
+            <div class="form__container">
+                <h2 class="title">Оставьте свой отзыв о сайте</h2>
+                <form action="">
+                    <div class="form">
+                        <div>
+                            <label for="name">Имя</label>
+                            <input class="form__text" type="text" id="name">
+                        </div>
+                        <div>
+                            <label for="surname">Фамилия</label>
+                            <input class="form__text" type="text" id="surname">
+                        </div>
+                        <div>
+                            <label for="mail">Почта</label>
+                            <input class="form__text" type="email" name="mail" id="mail">
+                        </div>
+                        <div>
+                            <label for="phone">Телефон (необязательно)</label>
+                            <input class="form__text" type="tel" name="phone" id="phone">
+                        </div>
+                        <div class="form__long_text">
+                            <label for="message">Ваши пожелания</label>
+                            <input class="form__text" type="text" id="message">
+                        </div>
+                    </div>
+                    <input class="button" type="submit" value="Отправить">
+                </form>
             </div>
 
         </div>
 
     </main>
 
-    <footer class="contact-footer">
-        <h3>Контакты:</h3>
-
-        <div class="container-social-media-buttons">
-            <a href="https://github.com/alex0d">
-                <div class="container-single-social-media-button">
-                    <div class="social-media-button">
-                        <img class="pic-social-media" src="images/social-media-icons/github.png" alt="">
+    <footer class="footer">
+        <div class="footer__container">
+            <h3 class="title-h3">О нас</h3>
+            <p>Алексей Денисов | ИКБО-01-21</p>
+            <p>МИРЭА - Российский технологический университет</p>
+            <div class="container-social-media-buttons">
+                <a href="https://github.com/alex0d">
+                    <div class="container-single-social-media-button">
+                        <div class="social-media-button">
+                            <img class="pic-social-media" src="images/social-media-icons/github.png" alt="">
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="https://t.me/alxq0">
-                <div class="container-single-social-media-button">
-                    <div class="social-media-button">
-                        <img class="pic-social-media" src="images/social-media-icons/tg.png" alt="">
+                </a>
+                <a href="https://t.me/alxq0">
+                    <div class="container-single-social-media-button">
+                        <div class="social-media-button">
+                            <img class="pic-social-media" src="images/social-media-icons/tg.png" alt="">
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="container-single-social-media-button">
-                    <div class="social-media-button">
-                        <img class="pic-social-media" src="images/social-media-icons/twitter.png" alt="">
+                </a>
+                <a href="">
+                    <div class="container-single-social-media-button">
+                        <div class="social-media-button">
+                            <img class="pic-social-media" src="images/social-media-icons/twitter.png" alt="">
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="container-single-social-media-button">
-                    <div class="social-media-button">
-                        <img class="pic-social-media" src="images/social-media-icons/vk.png" alt="">
+                </a>
+                <a href="">
+                    <div class="container-single-social-media-button">
+                        <div class="social-media-button">
+                            <img class="pic-social-media" src="images/social-media-icons/vk.png" alt="">
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="container-single-social-media-button">
-                    <div class="social-media-button">
-                        <img class="pic-social-media" src="images/social-media-icons/youtube.png" alt="">
+                </a>
+                <a href="">
+                    <div class="container-single-social-media-button">
+                        <div class="social-media-button">
+                            <img class="pic-social-media" src="images/social-media-icons/youtube.png" alt="">
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
-
-        <p><small>Copyright 2022 Aleksey Denisov. All Rights Reserved.</small></p>
+        <div class="footer__container">
+            <h3 class="title-h3">Важное</h3>
+            <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Ответы на вопросы</a></li>
+                <li><a href="#">Политика конфиденциальности</a></li>
+                <li><a href="#">Помощь</a></li>
+                <li><a href="#">Правила и положения</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="footer__container">
+            <h3 class="title-h3">Разделы</h3>
+            <ul>
+                <li><a href="#">Астероиды</a></li>
+                <li><a href="#">Кометы</a></li>
+                <li><a href="#">Все небесные тела</a></li>
+                <li><a href="#">Не все небесные тела</a></li>
+                <li><a href="#">Еще какой-то пункт</a></li>
+                <li><a href="#">И последний</a></li>
+            </ul>
+        </div>
+        <div class="footer__container">
+            <h3 class="title-h3">Контакты</h3>
+            <ul>
+                <li><a href="mailto:alexey.d707@gmail.com">Написать</a></li>
+                <li><a href="tel:+">Позвонить</a></li>
+            </ul>
+        </div>
     </footer>
 
 </body>

@@ -1,5 +1,33 @@
-/*Оформление блока main_div */
-.main_div{
+body {
+    margin: 0;
+    background-color: white;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+    grid-gap: 5px 5px;
+}
+
+.header {
+    /*background-color: aquamarine;*/
+    grid-area: header;
+}
+
+.content {
+    /*background-color: #242930;*/
+    grid-area: main;
+}
+
+.footer {
+    margin-top: 50px;
+    grid-area: footer;
+}
+
+
+.content{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,6 +42,11 @@
 
 .video-wrapper {
     position: relative;
+}
+
+.video-wrapper video {
+    width: calc(100% - 200px);
+    height: calc(100% - 20px);
 }
 
 .overlay-header {
@@ -54,5 +87,73 @@
         margin: 0;
         border-bottom: 2px solid #c9c9c9;
         transform: translateX(0);
+    }
+}
+
+.form__container{
+    /*height: 150px;*/
+    width: 70%;
+    color: white;
+    padding: 1rem;
+    background-color: rgba(73, 111, 194, 0.63);
+    blur(10px);
+    border-radius: 10px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+}
+.form > div {
+    display: flex;
+    flex-direction: column;
+}
+.form label {
+    /*font-size: 1rem;*/
+}
+.form__text {
+    color: white;
+    width: 70%;
+    outline: none;
+    border: none;
+    background-color: #000000;
+    transform-origin: bottom;
+    transform: rotateX(80deg);
+    padding: 0.5rem 1rem;
+    transition: all 1s;
+}
+.form > div:hover .form__text {
+    transform: rotateX(0);
+    transform-origin: bottom;
+    background-color: #b2dfe8;
+    transition: all .5s;
+}
+.form__text:focus {
+    transform: rotateX(0);
+    transform-origin: bottom;
+    background-color: white;
+    transition: all .5s;
+    color: black;
+}
+.form__long_text {
+    grid-column: span 2;
+}
+.button{
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #27cdf5;
+}
+
+
+@media (max-width:767px) {
+    .form{
+        grid-template-columns: 1fr;
+    }
+    .form__long_text {
+        grid-column: span 1;
     }
 }

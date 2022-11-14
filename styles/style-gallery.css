@@ -15,13 +15,31 @@ div {
     font-size: 0;
 }
 
+.gallery {
+    display: grid;
+    grid-auto-flow: dense;
+    gap: 10px;
+    grid-template-columns: repeat(4, calc(25% - 10px));
+    grid-template-rows: repeat(3, 350px);
+}
+
 .img_element {
     font-size: 16px;
     overflow: hidden;
     display: inline-block;
     margin-bottom: 8px;
-    width: calc(50% - 4px);
+    width: 100%;
     margin-right: 8px;
+}
+
+.long_img {
+    grid-column: span 2;
+}
+.long_long_img{
+    grid-column: span 3;
+}
+.height_img {
+    grid-row: span 2;
 }
 
 .img_element:nth-of-type(2n) {
@@ -29,9 +47,6 @@ div {
 }
 
 @media screen and (min-width: 50em) {
-    .img_element {
-        width: calc(25% - 6px);
-    }
 
     .img_element:nth-of-type(2n) {
         margin-right: 8px;
@@ -44,7 +59,7 @@ div {
 
 .img_element {
     overflow: hidden;
-    height: 270px;
+    height: 100%;
     border-radius: 4px;
     position: relative;
 }

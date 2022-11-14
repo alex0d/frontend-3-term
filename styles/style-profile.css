@@ -1,3 +1,32 @@
+body {
+    margin: 0;
+    background-color: white;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+    grid-gap: 5px 5px;
+}
+
+
+.header {
+    /*background-color: aquamarine;*/
+    grid-area: header;
+}
+
+.content {
+    /*background-color: #242930;*/
+    grid-area: main;
+}
+
+.footer {
+    margin-top: 50px;
+    grid-area: footer;
+}
+
 .already_have_account {
     padding-top: 10px;
     width:100%;
