@@ -98,14 +98,20 @@ div {
     top: 58%;
     font-size: 0.9rem;
 }
+
 .img_element:hover h3,
-.img_element:hover p {
+.img_element:hover p,
+.img_element:hover .placement {
     animation-name: show-image-description;
     animation-duration: 0.7s;
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-timing-function: ease-out;
     animation-fill-mode: both;
+}
+
+.img_element:hover .heart {
+    left: -25%;
 }
 
 @media only screen and (max-width: 480px) {
@@ -194,4 +200,43 @@ div {
 .btn-add-image:hover:after{
     width:100%;
     transition:800ms ease all;
+}
+
+.heart {
+    position: relative;
+    top: -50%;
+    left: -300%;  /* -25% in normal state */
+    width: 100px;
+    height: 100px;
+    background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+    transition: background-position 1s steps(28);
+    transition-duration: 0s;
+}
+
+.heart.is-active {
+    transition-duration: 1s;
+    background-position: -2800px 0;
+ }
+
+.counter {
+    position: inherit;
+    top: 18px;
+    left: 80px;
+    font-size: 1.5rem;
+    color: #fff;
+    /*font-weight: 700;*/
+    text-shadow: 0 0 10px #000;
+}
+
+body {
+    background: #000000;
+}
+
+.img_element .placement {
+    display: inline;
+    width: 80px;
+    height: 50px;
+    top: 70%;
 }
