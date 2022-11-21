@@ -92,9 +92,25 @@
                 <div class="input-box">
                     <input type="password" name="password" placeholder="Пароль" required>
                 </div>
-                <div class="input-box">
-                    <input type="submit" value="Войти">
+
+                <div class="login-and-captcha">
+                    <div class="input-box">
+                        <input type="submit" id="log-in" value="Войти">
+                    </div>
+                    <div class="captcha">
+                        <p>Введите капчу</p>
+                        <div id="captcha-generated">
+                            123
+                        </div>
+                        <div class="captcha-user-enter">
+                            <input type="text" id="captcha-enter" name="captcha" placeholder="...">
+                            <button type="button" class="btn-animated btn-enter-captcha">
+                                <span>OK</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
+
                 <p class="additional-options" id="forgot_pass">Забыли пароль? <a href="">Восстановить</a></p>
                 <p class="additional-options" id="register">Еще нет аккаунта? <a href="">Зарегистрироваться</a></p>
             </form>
