@@ -56,18 +56,9 @@ $(function () {
     let captcha_success = false;
     let number_of_attempts = 0;
 
-    // function check_submit() {
-    //     if ($captcha_user_input.val() === '') {
-    //         $log_in_button.attr("disabled", true);
-    //     } else {
-    //         $log_in_button.removeAttr("disabled");
-    //     }
-    // }
-
     function check_captcha() {
         console.log($captcha_user_input.val());
         if ($captcha_user_input.val() === "") {
-            // Пошатать капчу
             $captcha_generated_text.css("color", "red");
             $captcha_user_input.css("border-color", "red");
 
