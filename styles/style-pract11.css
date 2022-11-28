@@ -1,0 +1,44 @@
+body{
+    background-color: white;
+}
+
+.title{
+    text-align: center;
+}
+.title_h2{
+    margin: 1rem 0 2rem 0;
+    font-size: 1.5rem;
+}
+
+.task {
+    margin-bottom: 150px;
+}
+
+.container:nth-of-type(1) {
+    margin-top: 50px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 1.5rem;
+}
+.card {
+    flex: 1 1 10%;
+}
+.card2{
+    flex: 1 1 10%;
+}
+.button{
+    font-size: 1.2rem;
+    border-radius: 20px;
+    margin: 0 4rem;
+    flex: 1 1 20%;
+    padding: 1rem;
+    background-color: #f5f5f5;
+}
+img{
+    width: 100%;
+}
