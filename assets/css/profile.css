@@ -755,6 +755,9 @@ form {
     .input-box input{
         width: 100%;
     }
+    .input-box input::placeholder {
+        font-size: 0.9rem;
+    }
     .input-box input[type=submit] {
         width: 112%;  /* fix? */
         max-width: 112%;
