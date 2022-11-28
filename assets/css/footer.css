@@ -52,16 +52,6 @@
     }
 }
 
-.footer h1,
-.footer h2,
-.footer h3,
-.footer h4,
-.footer h5,
-.footer h6 {
-    font-size: inherit;
-    font-weight: 400;
-}
-
 .footer {
     color: white;
     display: grid;
@@ -144,13 +134,32 @@
 }
 
 @media (max-width:992px) {
+    .footer__container{
+        margin: 0;
+    }
     .footer{
         grid-template-columns: repeat(2, 1fr);
+        column-gap: 100px;
     }
 }
 
-@media (max-width:767px) {
+@media (max-width:680px) {
+    .footer__container{
+        text-align: center;
+        margin: 0 auto;
+    }
     .footer{
         grid-template-columns: 1fr;
+    }
+    .title-h3 {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .title-h3::before{
+        display: none;
+    }
+    .title-h3:hover::before{
+        display: none;
     }
 }
