@@ -7,9 +7,10 @@
 .logo_title p {
     white-space: nowrap;
     width:50%;
-    padding:20px;
+    padding:27px 20px 20px 20px;
     height:fit-content;
-    font-size:30px;
+    font-size:27px;
+    line-height: 1;
 }
 
 .logo_title img {
@@ -43,6 +44,7 @@
     white-space: nowrap;
     color: black;
     -webkit-transition:transform .5s;
+    text-decoration: none;
 }
 
 .nav_menu li a:hover{
@@ -164,7 +166,7 @@
         text-align: center;
         right: 0;
         left: 0;
-        margin-top: 29px;
+        margin-top: 37px;
         transition: all .3s;
     }
 

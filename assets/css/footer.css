@@ -1,19 +1,17 @@
-:root {
-    --social-media-button-size: 1.5rem;
-}
-
 .container-social-media-buttons {
     display: flex;
     justify-content: space-around;
 }
 
+.container-social-media-buttons a {
+    margin: 0 5px;
+}
+
 .container-single-social-media-button {
     position: relative;
     display: flex;
-    width: var(--social-media-button-size);
-    height: var(--social-media-button-size);
     border-radius: 50%;
-    padding: 0.7rem;
+    padding: 3px;
     overflow: hidden;
     z-index: 1;
     box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
@@ -92,7 +90,7 @@
 }
 
 .footer__container{
-
+    margin: 0 auto;
 }
 .footer__img__container {
     margin: 1rem 0;
