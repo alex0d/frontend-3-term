@@ -1,13 +1,15 @@
 .logo_title {
+    margin-left: 10px;
     display:flex;
     justify-content:left;
     align-items:center;
     height:60px;
 }
 .logo_title p {
+    margin-bottom: 5px;
     white-space: nowrap;
     width:50%;
-    padding:27px 20px 20px 20px;
+    padding: 0 10px 0 7px;
     height:fit-content;
     font-size:27px;
     line-height: 1;
@@ -18,12 +20,26 @@
     height: 40px;
 }
 
+.dropdown-menu {
+    z-index: 999;
+}
+
 .header_navigation{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:20px;
+    padding: 10px 10px 5px 10px;
     border-bottom: 2px solid cornflowerblue;
+}
+
+.nav_links {
+    margin: 0;
+    padding-left: 0.7rem;
+}
+
+.nav_menu .dropdown {
+    position: relative;
+    display: inline-block;
 }
 
 .nav_menu {
@@ -146,13 +162,23 @@
 }
 
 
-@media (max-width: 830px){
+@media (max-width: 850px){
+    .me-3 {
+        position: relative;
+        right: -8px;
+    }
+
     .logo_title img{
         display:none;
     }
 
     .logo_title p {
-        white-space: unset;
+        white-space: normal;
+        width:100%;
+    }
+
+    .nav_links {
+        margin: 7px 0 0 0;
     }
 
     .nav_menu {
@@ -166,7 +192,7 @@
         text-align: center;
         right: 0;
         left: 0;
-        margin-top: 37px;
+        margin-top: 5px;
         transition: all .3s;
     }
 
@@ -268,7 +294,7 @@
 
     .hamburger{
         display: block;
-        padding: 20px 0;
+        padding: 20px;
     }
 
     #checkbox_toggle:checked .header_navigation{
