@@ -1,4 +1,5 @@
 .logo_title {
+    margin-right: auto;
     margin-left: 10px;
     display:flex;
     justify-content:left;
@@ -20,6 +21,11 @@
     height: 40px;
 }
 
+.dropdown a, .dropdown a:hover {
+    text-decoration: none;
+    color: black;
+}
+
 .dropdown-menu {
     z-index: 999;
 }
@@ -27,7 +33,7 @@
 .header_navigation{
     display:flex;
     align-items:center;
-    justify-content:space-between;
+    justify-content:end;
     padding: 10px 10px 5px 10px;
     border-bottom: 2px solid cornflowerblue;
 }
@@ -40,6 +46,7 @@
 .nav_menu .dropdown {
     position: relative;
     display: inline-block;
+    margin-left: 10px;
 }
 
 .nav_menu {
@@ -163,11 +170,6 @@
 
 
 @media (max-width: 850px){
-    .me-3 {
-        position: relative;
-        right: -8px;
-    }
-
     .logo_title img{
         display:none;
     }
@@ -295,6 +297,7 @@
     .hamburger{
         display: block;
         padding: 20px;
+        margin-bottom: 5px;
     }
 
     #checkbox_toggle:checked .header_navigation{
