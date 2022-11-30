@@ -21,7 +21,8 @@
     height: 40px;
 }
 
-.dropdown a, .dropdown a:hover {
+.header_navigation .dropdown a,
+.header_navigation .dropdown a:hover {
     text-decoration: none;
     color: black;
 }
@@ -50,7 +51,7 @@
 }
 
 .nav_menu {
-    z-index: 999;
+    z-index: 9999;
     display: flex;
     font-size: 18px;
 }
@@ -170,10 +171,6 @@
 
 
 @media (max-width: 850px){
-    .logo_title img{
-        display:none;
-    }
-
     .logo_title p {
         white-space: normal;
         width:100%;
@@ -323,5 +320,10 @@
         border-bottom: 2px solid cornflowerblue;
         border-top: 2px solid cornflowerblue;
     }
+}
 
+@media (max-width: 340px) {
+    .logo_title img{
+        display:none;
+    }
 }
