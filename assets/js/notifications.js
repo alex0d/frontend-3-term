@@ -1,5 +1,7 @@
 $(function () {
     let $dropdown = $('.dropdown');
+    let $dropdown_menu = $('.dropdown-menu');
+    let $notification_count = $('.badge-notification');
     let count = 0;
 
     $dropdown.on('click', function(e){
@@ -20,4 +22,37 @@ $(function () {
             $('.dropdown-toggle').dropdown('toggle');
         }
     });
+
+
+    function changeNotification(cmd) {
+        count++;
+        $notification_count.text(count);
+        $dropdown_menu.prepend('<a class="dropdown-item" href="#">' + 'Новость #' + count + '</a>');
+
+        if (count > 10) {
+            $dropdown_menu.find('a:last').remove();
+        }
+    }
+
+    function notificationDecorator(func) {
+        return function(cmd) {
+            if (cmd === 1) {
+                clearInterval(intervalId)
+                setTimeout(function() {
+                    func
+                    intervalId = setInterval(changeNotification, 3000, 0)
+                }, 100, cmd)
+            }
+            else {
+                func.call(cmd)
+            }
+        };
+    }
+
+    let intervalId  = setInterval(changeNotification,3000, 0)
+    changeNotification = notificationDecorator(changeNotification)
+    $dropdown.on('click', function(){
+        changeNotification(1)
+    });
+
 })
