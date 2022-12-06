@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/practice13.css">
+  <script src="assets/js/practice13.js" defer></script>
+  <script src="assets/js/dragNdrop.js" defer></script>
+  <title>Practice 13</title>
+</head>
+
+<body>
+  <div class="container">
+  <h1>Задание 1</h1>
+  <h2>Подтверждение перехода по ссылке</h2>
+  <div id="contents">
+    <p>
+      Найти информацию можно на сайте <a href="https://roscosmos.ru"><i>Роскосмоса</i></a> или на сайте <a href="https://nasa.gov">NASA</a>.
+    </p>
+  </div>
+  </div>
+
+
+  <div class="container">
+  <h1>Задание 2</h1>
+  <h2>Галерея изображений</h2>
+  <div class="gallery">
+    <p><img id="largeImg" src="images/gallery/1.jpg" alt="Large image"></p>
+    <div>
+      <ul id="thumbs">
+        <li>
+          <a href="images/gallery/1.jpg"><img src="images/gallery/1.jpg"></a>
+        </li>
+        <li>
+          <a href="images/gallery/2.jpg"><img src="images/gallery/2.jpg"></a>
+        </li>
+        <li>
+          <a href="images/gallery/6.jpg"><img src="images/gallery/6.jpg"></a>
+        </li>
+        <li>
+          <a href="images/gallery/4.jpg"><img src="images/gallery/4.jpg"></a>
+        </li>
+        <li>
+          <a href="images/gallery/5.jpg"><img src="images/gallery/5.jpg"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+  <div class="container">
+  <h1>Задание 3</h1>
+  <h2>Список с возможность выделения</h2>
+  <div>
+    <ul id="selectable_list">
+      <li>Меркурий</li>
+      <li>Венера</li>
+      <li>Земля</li>
+      <li>Марс</li>
+      <li>Юпитер</li>
+      <li>Сатурн</li>
+      <li>Уран</li>
+      <li>Нептун</li>
+    </ul>
+  </div>
+  </div>
+
+  <div class="container">
+  <h1>Задание 4</h1>
+  <h2>Слайдер</h2>
+  <div id="slider" class="slider">
+    <div class="thumb"></div>
+  </div>
+  </div>
+
+  <div class="container task5">
+  <h1>Задание 5</h1>
+  <h2>Перетаскивание элементов</h2>
+  <div class="elements">
+    <div class="dragElement">
+      <div class="lblTitle">Картинка 1</div>
+      <div class="lblPrice">100</div>
+      <img class="imgPicture" src="images/gallery/1.jpg">
+    </div>
+
+    <div class="dragElement">
+      <div class="lblTitle">Картинка 2</div>
+      <div class="lblPrice">200</div>
+      <img class="imgPicture" src="images/gallery/2.jpg">
+    </div>
+
+    <div class="dragElement">
+      <div class="lblTitle">Картинка 3</div>
+      <div class="lblPrice">300</div>
+      <img class="imgPicture" src="images/gallery/3.jpg">
+    </div>
+
+    <div class="dragElement">
+      <div class="lblTitle">Картинка 4</div>
+      <div class="lblPrice">400</div>
+      <img class="imgPicture" src="images/gallery/4.jpg">
+    </div>
+  </div>
+  <div id="dZone">
+    Общая сумма: <div class="totalBox" id="divTotal">0.00</div>
+  </div>
+  </div>
+
+</body>
+</html>
