@@ -104,3 +104,26 @@ body {
     cursor: pointer;
     transition: background 0.2s;
 }
+
+@media(max-width: 460px) {
+    h1 {
+        padding-bottom: 15px;
+    }
+    #btn-back-to-index {
+        top: 50px;
+        left: calc(50% - 27.5px);
+        width: 55px;
+        height: 25px;
+        font-size: 1rem;
+    }
+}
+
+@media(max-width: 260px) {
+    #btn-back-to-index {
+        top: 77px;
+        left: calc(50% - 27.5px);
+        width: 55px;
+        height: 25px;
+        font-size: 1rem;
+    }
+}
