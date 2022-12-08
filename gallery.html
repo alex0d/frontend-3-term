@@ -4,96 +4,185 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/gallery.css">
     <script src="assets/js/jquery.slim.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/50c9e40fe2.js" crossorigin="anonymous"></script>
     <script src="assets/js/gallery.js" defer></script>
     <script src="assets/js/truncator.js" defer></script>
-    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <title>Галерея</title>
 </head>
 <body>
 
-<h2>Галерея небесных тел</h2>
+<form action="index.html">
+    <button
+            type="submit"
+            class="btn btn-info btn-floating btn-lg"
+            id="btn-back-to-index"
 
-<div class="gallery">
-    <div class="img_element long_img"><img src="images/gallery/1.jpg" alt="Картинка">
-        <h3>Комета</h3>
-        <p>На Земле было обнаружено несколько древних ударных кратеров. Они являются свидетельствами падения на Землю в прошлом крупных астероидов.</p>
-        <div class="placement">
-            <div class="heart"></div>
-            <div class="counter">0</div>
+    >
+        <i class="fa fa-arrow-left"></i>
+    </button>
+</form>
+
+<h1 class="text-center mb-4">Галерея небесных тел</h1>
+<section class="image-grid">
+    <div class="container-xxl">
+        <div class="row gy-4">
+            <div class="col-12 col-sm-6 col-md-4">
+                <figure>
+                    <a class="d-block" href="">
+                        <img width="1920" height="1280" src="images/gallery/ceres1.png" class="img-fluid" alt="Церера" data-caption="Астероид Церера. Сейчас имеет статус карликовой планеты">
+                    </a>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <figure>
+                    <a class="d-block" href="">
+                        <img width="1920" height="1280" src="images/gallery/vesta1.jpg" class="img-fluid" alt="Веста" data-caption="Астероид Веста. Занимает первое место по массе и размеру">
+                    </a>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <figure>
+                    <a class="d-block" href="">
+                        <img width="1920" height="1280" src="images/gallery/apophis1.jpg" class="img-fluid" alt="Апофис" data-caption="Астероид Апофис">
+                    </a>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <figure>
+                    <a class="d-block" href="">
+                        <img width="1920" height="1280" src="images/gallery/pallas1.jpg" class="img-fluid" alt="Паллада" data-caption="Астероид Паллада">
+                    </a>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <figure>
+                    <a class="d-block" href="">
+                        <img width="1920" height="1280" src="images/gallery/hygiea1.jpg" class="img-fluid" alt="Гигея" data-caption="Астероид Гигея">
+                    </a>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <figure>
+                    <a class="d-block" href="">
+                        <img width="1920" height="1280" src="images/gallery/asteroids1.jpg" class="img-fluid" alt="Астероиды" data-caption="Астероиды Солнечной системы">
+                    </a>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <figure>
+                    <a class="d-block" href="">
+                        <img width="1920" height="1280" src="images/gallery/Comet_P1_McNaught02.jpg" class="img-fluid" alt="Макнота" data-caption="Комета C/2006 P1 (Макнота), также известная как Большая комета 2007 года">
+                    </a>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <figure>
+                    <a class="d-block" href="">
+                        <img width="1920" height="1280" src="images/gallery/Hale-Bopp.jpg" class="img-fluid" alt="C/1995 O1 (Хейла — Боппа)" data-caption="C/1995 O1 (Хейла — Боппа)">
+                    </a>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <figure>
+                    <a class="d-block" href="">
+                        <img width="1920" height="1280" src="images/gallery/Great_Comet_of_1882.jpg" class="img-fluid" alt="Большая комета 1882 года из группы околосолнечных комет Крейца" data-caption="Большая комета 1882 года из группы околосолнечных комет Крейца">
+                    </a>
+                </figure>
+            </div>
         </div>
     </div>
+</section>
 
-    <div class="img_element height_img height_img_1"><img src="images/gallery/2.jpg" alt="Картинка">
-        <h3>Комета</h3>
-        <p>Астероид, который упал на полуостров Юкатан около 66 миллионов лет назад, имел размер не менее 10 километров в поперечнике.</p>
-        <div class="placement">
-            <div class="heart"></div>
-            <div class="counter">0</div>
+<div class="modal lightbox-modal" id="lightbox-modal" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body">
+                <div class="container-fluid p-0">
+                    <!-- JS content here -->
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="img_element"><img src="images/gallery/3.jpg" alt="Картинка">
-        <h3>Булыжник</h3>
-        <p>Летит куда-то</p>
-        <div class="placement">
-            <div class="heart"></div>
-            <div class="counter">0</div>
-        </div>
-    </div>
-
-    <div class="img_element height_img height_img_2"><img src="images/gallery/4.jpg" alt="Картинка">
-        <h3>БАБАХ</h3>
-        <p>Что-то взорвалось</p>
-        <div class="placement">
-            <div class="heart"></div>
-            <div class="counter">0</div>
-        </div>
-    </div>
-
-    <div class="img_element"><img src="images/gallery/5.jpg" alt="Картинка">
-        <h3>Камни</h3>
-        <p>Астероиды и кометы могут теоретически распространять жизнь, а не только приносить разрушения.</p>
-        <div class="placement">
-            <div class="heart"></div>
-            <div class="counter">0</div>
-        </div>
-    </div>
-
-    <div class="img_element"><img src="images/gallery/6.jpg" alt="Картинка">
-        <h3>Хвост</h3>
-        <p>Просто хвост</p>
-        <div class="placement">
-            <div class="heart"></div>
-            <div class="counter">0</div>
-        </div>
-    </div>
-
-    <div class="img_element long_long_img"><img src="images/gallery/7.jpg" alt="Картинка">
-        <h3>Небесное тело</h3>
-        <p>Вот так вот</p>
-        <div class="placement">
-            <div class="heart"></div>
-            <div class="counter">0</div>
-        </div>
-    </div>
-
-<!--    <div class="img_element"><img src="images/gallery/8.jpg" alt="Картинка">-->
-<!--        <h3>Много камней</h3>-->
-<!--        <p>Разлетаются</p>-->
-<!--    </div>-->
-
-<!--    <div class="img_element"><img src="images/gallery/9.jpg" alt="Картинка">-->
-<!--        <h3>Один камень</h3>-->
-<!--        <p>Совсем один...</p>-->
-<!--    </div>-->
-
-<!--    <div class="img_element"><img src="images/gallery/10.jpg" alt="Картинка">-->
-<!--        <h3>Детализированное...</h3>-->
-<!--        <p>Одна картинка, на которую ушло полбюджета</p>-->
-<!--    </div>-->
-
 </div>
 
-<button class="btn-animated btn-add-image"><span>Отправить свою картинку</span></button>
+<footer class="footer">
+    <div class="footer__container">
+        <h3 class="title-h3">О нас</h3>
+        <p>Алексей Денисов | ИКБО-01-21</p>
+        <p>МИРЭА - Российский технологический университет</p>
+        <div class="container-social-media-buttons">
+            <a href="https://github.com/alex0d">
+                <div class="container-single-social-media-button">
+                    <div class="social-media-button">
+                        <img class="pic-social-media" src="images/social-media-icons/github.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="https://t.me/alxq0">
+                <div class="container-single-social-media-button">
+                    <div class="social-media-button">
+                        <img class="pic-social-media" src="images/social-media-icons/tg.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="container-single-social-media-button">
+                    <div class="social-media-button">
+                        <img class="pic-social-media" src="images/social-media-icons/twitter.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="container-single-social-media-button">
+                    <div class="social-media-button">
+                        <img class="pic-social-media" src="images/social-media-icons/vk.png" alt="">
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="container-single-social-media-button">
+                    <div class="social-media-button">
+                        <img class="pic-social-media" src="images/social-media-icons/youtube.png" alt="">
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="footer__container">
+        <h3 class="title-h3">Важное</h3>
+        <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Ответы на вопросы</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+            <li><a href="#">Помощь</a></li>
+            <li><a href="#">Правила и положения</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </div>
+    <div class="footer__container">
+        <h3 class="title-h3">Разделы</h3>
+        <ul>
+            <li><a href="#">Астероиды</a></li>
+            <li><a href="#">Кометы</a></li>
+            <li><a href="#">Все небесные тела</a></li>
+            <li><a href="#">Не все небесные тела</a></li>
+            <li><a href="#">Еще какой-то пункт</a></li>
+            <li><a href="#">И последний</a></li>
+        </ul>
+    </div>
+    <div class="footer__container">
+        <h3 class="title-h3">Контакты</h3>
+        <ul>
+            <li><a href="mailto:alexey.d707@gmail.com">Написать</a></li>
+            <li><a href="tel:+">Позвонить</a></li>
+        </ul>
+    </div>
+</footer>
 
 </body>
 </html>

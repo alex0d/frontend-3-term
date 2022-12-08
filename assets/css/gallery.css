@@ -1,242 +1,106 @@
+/* BASIC STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+    --yellow: #fffbbc;
+    --lightbox: #242424;
+}
+
 body {
-    background: black;
-    color: white;
-    width: 80%;
-    margin: 30px auto;
-    font-family: sans-serif;
+    padding-top: 10px;
+    margin: 24px 0 48px;
+    font: 20px / 28px "Marck Script", cursive;
 }
 
-h2 {
-    text-align: center;
-    margin: 0 0 30px;
-}
-
-div {
-    font-size: 0;
-}
-
-.gallery {
-    display: grid;
-    grid-auto-flow: dense;
-    gap: 10px;
-    grid-template-columns: repeat(4, calc(25% - 10px));
-    grid-template-rows: repeat(3, 350px);
-}
-
-.img_element {
-    font-size: 16px;
-    overflow: hidden;
-    display: inline-block;
-    margin-bottom: 8px;
-    width: 100%;
-    margin-right: 8px;
-}
-
-.long_img {
-    grid-column: span 2;
-}
-.long_long_img{
-    grid-column: span 3;
-}
-.height_img {
-    grid-row: span 2;
-}
-
-.img_element:nth-of-type(2n) {
-    margin-right: 0;
-}
-
-@media screen and (min-width: 50em) {
-
-    .img_element:nth-of-type(2n) {
-        margin-right: 8px;
-    }
-
-    .img_element:nth-of-type(4n) {
-        margin-right: 0;
-    }
-}
-
-.img_element {
-    overflow: hidden;
-    height: 100%;
-    border-radius: 4px;
-    position: relative;
-}
-
-.img_element img {
-    min-width: 100%;
-    height: 100%;
-    transition: .5s;
-}
-.img_element:hover img {
-    transform: scale(1.2);
-    filter: blur(2px);
-}
-
-@keyframes show-image-description {
-    from {
-        position: absolute;
-        transform: translateX(-100%);
-    }
-    to {
-        position: absolute;
-        color: #ffffff;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 5px 15px;
-        margin: 0;
-        border-bottom: 2px solid #c9c9c9;
-        transform: translateX(0);
-    }
-}
-
-.img_element h3 {
-    top: 45%;
-    font-size: 1.1rem;
-}
-.img_element p {
-    top: 58%;
-    font-size: 0.9rem;
-}
-
-.img_element:hover h3,
-.img_element:hover p,
-.img_element:hover .placement {
-    animation-name: show-image-description;
-    animation-duration: 0.7s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-timing-function: ease-out;
-    animation-fill-mode: both;
-}
-
-.img_element:hover .heart {
-    left: -25%;
-}
-
-@media only screen and (max-width: 480px) {
-    .img_element {
-        height: 370px;
-    }
-    .img_element h3 {
-        font-size: 1.4rem;
-        top: 47%;
-    }
-    .img_element p {
-        font-size: 1rem;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    .img_element h3 {
-        font-size: 1.1rem;
-        top: 45%;
-    }
-    .img_element p {
-        font-size: 0.9rem;
+@media (max-width: 700px) {
+    .notification {
+        display: none;
     }
 }
 
 
-.p a {
-    display: inline;
-    font-size: 13px;
-    margin: 0;
+/* IMAGE GRID STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.image-grid {
+    margin-bottom: 30px;
+}
+.image-grid figure {
+    margin-bottom: 0;
 }
 
-.p {
-    text-align: center;
-    font-size: 13px;
-    padding-top: 100px;
+.image-grid img {
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.2s;
+    border-radius: 2px;
 }
 
-.btn-animated {
-    width: fit-content;
-    margin: 0 auto;
+.image-grid a:hover img {
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.35);
+}
+
+
+/* LIGHTBOX STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.lightbox-modal .modal-content {
+    background: var(--lightbox);
+}
+
+.lightbox-modal .btn-close {
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    font-size: 1.2rem;
+    z-index: 10;
+}
+
+.lightbox-modal .modal-body {
     display: flex;
-    padding: 0 10px 0 10px;
-    height: 40px;
-    color: #fff;
-    border-radius: 5px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: transparent;
+    align-items: center;
+    padding: 0;
+    text-align: center;
+}
+
+.lightbox-modal img {
+    width: auto;
+    max-height: 100vh;
+    max-width: 100%;
+}
+
+.lightbox-modal .carousel-caption {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(36, 36, 36, 0.75);
+}
+
+.lightbox-modal .carousel-control-prev,
+.lightbox-modal .carousel-control-next {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    width: auto;
+}
+
+.lightbox-modal .carousel-control-prev {
+    left: 10px;
+}
+
+.lightbox-modal .carousel-control-next {
+    right: 10px;
+}
+
+
+#btn-back-to-index {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 55px;
+    height: 35px;
+    padding: 0;
+    font-size: 1.2rem;
+    border: 0;
+    border-radius: 0.25rem;
+    background: lightblue;
+    color: var(--lightbox);
     cursor: pointer;
-    transition: all 0.5s ease;
-    position: relative;
-    outline: none;
-}
-
-.btn-add-image {
-    width: fit-content;
-    height: 40px;
-    line-height: 42px;
-    border: none;
-    background: transparent;
-}
-.btn-add-image:hover {
-    color: lightblue;
-    background: transparent;
-    box-shadow:none;
-}
-.btn-add-image:before,
-.btn-add-image:after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:0;
-    height:2px;
-    width:0;
-    background: gold;
-    transition:400ms ease all;
-}
-.btn-add-image:after{
-    right:inherit;
-    top:inherit;
-    left:0;
-    bottom:0;
-}
-.btn-add-image:hover:before,
-.btn-add-image:hover:after{
-    width:100%;
-    transition:800ms ease all;
-}
-
-.heart {
-    position: relative;
-    top: -50%;
-    left: -300%;  /* -25% in normal state */
-    width: 100px;
-    height: 100px;
-    background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
-    background-position: 0 0;
-    cursor: pointer;
-    transition: background-position 1s steps(28);
-    transition-duration: 0s;
-}
-
-.heart.is-active {
-    transition-duration: 1s;
-    background-position: -2800px 0;
- }
-
-.counter {
-    position: inherit;
-    top: 18px;
-    left: 80px;
-    font-size: 1.5rem;
-    color: #fff;
-    /*font-weight: 700;*/
-    text-shadow: 0 0 10px #000;
-}
-
-body {
-    background: #000000;
-}
-
-.img_element .placement {
-    display: inline;
-    width: 80px;
-    height: 50px;
-    top: 70%;
+    transition: background 0.2s;
 }
