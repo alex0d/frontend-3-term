@@ -44,7 +44,7 @@ body {
 
 
 .intro_container {
-    background: linear-gradient(rgba(44, 40, 50, 1), rgba(2, 2, 61, 0)), url("/images/background.jpg");
+    background: linear-gradient(rgba(44, 40, 50, 1), rgba(2, 2, 61, 0)), url("../../images/background.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -91,7 +91,7 @@ body {
 }
 
 .heavenly_body_container:nth-child(2) {
-    background-image: url("/images/asteroid-background.jpg");
+    background-image: url("../../images/asteroid-background.jpg");
     background-size: cover;
     background-position: center;
     grid-template-columns: minmax(30%, 50%) minmax(50%, 70%);
@@ -99,7 +99,7 @@ body {
 
 .heavenly_body_container:nth-child(4) {
     background-size: cover;
-    background: url("/images/comet-background.jpeg") center;
+    background: url("../../images/comet-background.jpeg") center;
     grid-template-columns: minmax(50%, 70%) minmax(30%, 50%);
 }
 
