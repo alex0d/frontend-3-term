@@ -1,54 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight&family=Pattaya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,300;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 body {
-    margin: 0;
-    background-color: white;
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
 }
 
-.aside a {
-    text-decoration: none;
-}
-
-#content_nav {
-    margin: 0 15px;
-}
-
-.contentBlock {
-    margin: 0 10px;
-}
-
-section h2 {
-    font-style: italic;
+.intro_text {
+    color: #fff;
     font-size: x-large;
+    margin: 0%;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
 
-.title {
-    font-size: xx-large;
-    display: flex;
-    align-items: center;
-}
-
-.article {
-    margin: 5px;
-    padding: 0 5px 2px;
-    background: white;
-    box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
-}
-
-#comet_image, #asteroid_image {
-    float: left;
-    margin: 0 10px 10px 0;
-}
-
-@media (max-width: 445px) {
-    #comet_image, #asteroid_image {
-        display: none;
+@media (max-width: 490px) {
+    .main_title {
+        padding-left: 3%;
+        padding-right: 3%;
+        text-align: center;
     }
 }
 
-#arrow_up {
-    position: fixed;
-    float: right;
-    bottom: 15px;
-    right: 0;
-    margin-right: 30px;
+.intro_title {
+    font-size: xx-large;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+.intro_content {
+    padding-bottom: 7em;
+}
+
+.main_title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+
+.intro_container {
+    background: linear-gradient(rgba(44, 40, 50, 1), rgba(2, 2, 61, 0)), url("/images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    /*make space-beetwen*/
+    justify-content: space-between;
+}
+
+.intro_container > .intro_content {
+    font-size: 25px;
+}
+
+.intro_container > .intro_title {
+    font-size: 50px;
+}
+
+@media (max-width: 1000px) {
+    .intro_container > .intro_content {
+        font-size: 30px;
+    }
+
+    .intro_container > .intro_title {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 400px) {
+    .intro_container > .intro_content {
+        font-size: 25px;
+    }
+
+    .intro_container > .intro_title {
+        font-size: 30px;
+    }
+}
+
+.heavenly_body_container {
+    display: grid;
+    grid-template-rows: 1fr;
+    height: auto;
+    padding-top: 3em;
+    padding-left: 3em;
+    padding-bottom: 1.5em;
+}
+
+.heavenly_body_container:nth-child(2) {
+    background-image: url("/images/asteroid-background.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-template-columns: minmax(30%, 50%) minmax(50%, 70%);
+}
+
+.heavenly_body_container:nth-child(4) {
+    background-size: cover;
+    background: url("/images/comet-background.jpeg") center;
+    grid-template-columns: minmax(50%, 70%) minmax(30%, 50%);
+}
+
+.plain_text {
+    font-size: 30px;
+    margin: auto;
+    color: #fff;
+}
+
+.wow_image {
+    width: 70%;
+    margin: auto;
+}
+
+.plain_text_rev {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-right: 2em;
+}
+
+.wow_image_rev {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.box-center {
+    margin: 30px auto auto auto;
+    text-align: center;
+    background: #472496;
+    position: relative;
+    left: calc(30%);
+    border-radius: 5px;
+}
+
+.box-center a, .box-center a:visited, .box-center a:active, .box-center a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.box-center:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+
+.spacer {
+    padding: 20px;
+}
+
+@media (max-width: 1200px) {
+    .plain_text {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .plain_text {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 900px) {
+    .main_title {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .plain_text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .intro_content {
+        padding-bottom: 3em;
+    }
+    .heavenly_body_container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        padding-top: 1em;
+        padding-left: 1em;
+    }
+
+    .wow_image {
+        width: 90%;
+        margin: auto;
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    .plain_text {
+        padding-left: 3%;
+        padding-right: 3%;
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+}
+
+/* Адаптивность шрифтов */
+
+@media (min-width: 1500px) {
+    .plain_text {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 2300px) {
+    .plain_text {
+        font-size: 50px;
+    }
+
+    .plain_text {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 2000px) {
+    .intro_title {
+        font-size: 50px;
+    }
+
+    .intro_content {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 700px) {
+    .intro_title {
+        font-size: 30px;
+    }
+
+    .intro_content {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .intro_title {
+        font-size: 25px;
+    }
+
+    .intro_content {
+        font-size: 15px;
+    }
 }

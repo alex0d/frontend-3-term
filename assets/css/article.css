@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    background-color: white;
+}
+
+.aside a {
+    text-decoration: none;
+}
+
+#content_nav {
+    margin: 0 15px;
+}
+
+.contentBlock {
+    margin: 0 10px;
+}
+
+section h2 {
+    font-style: italic;
+    font-size: x-large;
+}
+
+.title {
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+}
+
+.article {
+    margin: 5px;
+    padding: 0 5px 2px;
+    background: white;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+#comet_image, #asteroid_image {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+@media (max-width: 445px) {
+    #comet_image, #asteroid_image {
+        display: none;
+    }
+}
+
+#arrow_up {
+    position: fixed;
+    float: right;
+    bottom: 15px;
+    right: 0;
+    margin-right: 30px;
+}

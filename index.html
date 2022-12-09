@@ -1,342 +1,167 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.png" sizes="any">
-
+    <title>Астероиды и кометы</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/50c9e40fe2.js" crossorigin="anonymous"></script>
-    <script src="assets/js/arrow_up.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/css/animate.css"/>
 
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 
-    <title>Астероиды и кометы</title>
+
 </head>
 <body>
-    <header>
-        <nav class="header_navigation">
-            <div class="logo_title">
-                <img src="logo.png" alt="Астероиды и кометы">
-                <p>Астероиды и кометы</p>
+<header>
+    <nav class="header_navigation">
+        <div class="logo_title">
+            <img src="logo.png" alt="Астероиды и кометы">
+            <p>Астероиды и кометы</p>
+        </div>
+        <ul class="nav_links">
+            <input type="checkbox" id="checkbox_toggle">
+            <label for="checkbox_toggle" class="hamburger"><span class="hamburger_mid_line"></span></label>
+            <div class="nav_menu">
+                <li><a href="article.html">Главная</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="about.html">О сайте</a></li>
+                <li><a href="profile.html">Профиль</a></li>
             </div>
-            <ul class="nav_links">
-                <input type="checkbox" id="checkbox_toggle">
-                <label for="checkbox_toggle" class="hamburger"><span class="hamburger_mid_line"></span></label>
-                <div class="nav_menu">
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="gallery.html">Галерея</a></li>
-                    <li><a href="about.html">О сайте</a></li>
-                    <li><a href="profile.html">Профиль</a></li>
+        </ul>
+        <div class="dropdown">
+            <a class="me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+               role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-bell"></i>
+                <span class="badge rounded-pill badge-notification bg-danger"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <!--                <li>-->
+                <!--                    <a class="dropdown-item" href="#">Project created!</a>-->
+                <!--                </li>-->
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <div class="main_title intro_container">
+            <h1 class="intro_title intro_text">Астероиды и кометы</h1>
+            <p class="intro_content intro_text wow bounceInDown">Астероиды и кометы - это небесные тела, движущиеся по орбите вокруг Солнца. Они имеют много общего, но есть и различия. Скорее узнайте о них больше! </p>
+        </div>
+    </section>
+    <section class="heavenly_body_container">
+        <div class="plain_text">
+            <p>Астероиды — это твердые каменистые тела, которые вращаются вокруг Солнца. Этим они повторяют поведение планет, но не могут называться так из-за своих небольших размеров. Они относятся к категории «малых тел Солнечной системы». Хотя их там миллионы, их общая масса меньше, чем у Луны.</p>
+        </div>
+        <img id="asteroid_image" src="/images/gallery/asteroid.png" class="wow_image  wow rotateInDownRight">
+    </section>
+
+    <section></section>
+
+    <section class="heavenly_body_container">
+        <div class="plain_text plain_text_rev">
+            <p>Кометы - это большие космические объекты, состоящие в основном из замороженных газов и вращающиеся вокруг Солнца. В своем изначальном состоянии кометы довольно крупны и могут быть размером с целые города, однако постепенно кометы нагреваются по мере приближения к источнику тепла, теряя тем самым свою массу.</p>
+        </div>
+        <img id="comet_image" src="/images/gallery/comet.png" class="wow_image wow_image_rev wow rotateInDownLeft">
+        <div class="box-center wow fadeInDown">
+            <a href="article.html">
+                <div class="spacer">
+                    <h3>Узнайте больше</h3>
+                    <p>Узнайте о самых ярких, красивых и заметных небесных телах, которые довелось наблюдать землянам!</p>
                 </div>
-            </ul>
-            <div class="dropdown">
-                <a class="me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
-                   role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-bell"></i>
-                    <span class="badge rounded-pill badge-notification bg-danger"></span>
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <!--                <li>-->
-                    <!--                    <a class="dropdown-item" href="#">Project created!</a>-->
-                    <!--                </li>-->
-                </ul>
-            </div>
-        </nav>
-    </header>
+            </a>
+        </div>
+    </section>
 
-    <div class="container-fluid overflow-hidden">
-        <div class="row overflow-auto">
-            <div class="aside col-12 col-sm-3 col-md-3 col-lg-2 col-xl-2 px-sm-2 px-0 bg-dark d-flex sticky-top">
-                <div class="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-white">
-                    <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start" id="menu">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link px-sm-0 px-2">
-                                <i class="fs-4 bi-house"></i><span class="ms-1 d-none d-sm-inline">Главная</span>
-                            </a>
-                        </li>
 
-                        <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle px-sm-0 px-1" id="dropdown-asteroid" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="images/icon_asteroid.png" height="24px" width="24px"><span class="ms-1 d-none d-sm-inline">Астероиды</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdown">
-                                <li><a class="dropdown-item" href="asteroids/ceres.html">Церера</a></li>
-                                <li><a class="dropdown-item" href="#">Веста</a></li>
-                                <li><a class="dropdown-item" href="#">Паллада</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle px-sm-0 px-1" id="dropdown-comet" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="images/icon_comet.png" height="24px" width="24px"><span class="ms-1 d-none d-sm-inline">Кометы</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdown">
-                                <li><a class="dropdown-item" href="comets/halley.html">Комета Галлея</a></li>
-                                <li><a class="dropdown-item" href="#">Хирон</a></li>
-                                <li><a class="dropdown-item" href="#">Вильда</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle px-sm-0 px-1" id="dropdown-sites" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fs-4 bi-grid"></i><span class="ms-1 d-none d-sm-inline">О космосе</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdown">
-                                <li><a class="dropdown-item" href="https://www.roscosmos.ru/">Роскосмос</a></li>
-                                <li><a class="dropdown-item" href="https://www.astronews.ru/">AstroNews</a></li>
-                                <li><a class="dropdown-item" href="https://cosmos-online.ru/">Космос Онлайн</a></li>
-                                <li><a class="dropdown-item" href="https://spacegid.com/">ScapeGid - гид в мире космоса</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+</main>
+<footer class="footer">
+    <div class="footer__container">
+        <h3 class="title-h3">О нас</h3>
+        <p>Алексей Денисов | ИКБО-01-21</p>
+        <p>МИРЭА - Российский технологический университет</p>
+        <div class="container-social-media-buttons">
+            <a href="https://github.com/alex0d">
+                <div class="container-single-social-media-button">
+                    <div class="social-media-button">
+                        <img class="pic-social-media" src="images/social-media-icons/github.png" alt="">
+                    </div>
                 </div>
-            </div>  <!-- end aside -->
-
-            <div class="content col d-flex flex-column h-sm-100">
-            <main class="row overflow-auto">
-            <div class="col pt-4">
-                <nav id="content_nav">
-                    <p>Содержание:</p>
-                    <ul type="square">
-                        <li><a href="#intro">Введение</a></li>
-                        <li><a href="#what-is-comet">Что такое комета?</a></li>
-                        <li><a href="#comet-types">Типы кометы</a></li>
-                        <li><a href="#what-is-asteroid">Астероиды</a></li>
-                        <li><a href="#asteroid-types">Типы астероидов</a></li>
-                    </ul>
-                </nav>
-
-
-                <div class="beginning">
-                <p id="intro">
-                    Астероиды и кометы имеют много общего. Все объекты подобных типов вращаются вокруг Солнца.
-                    И астероиды, и кометы намного меньше, чем планеты. И те, и другие являются свидетелями образования Солнечной системы,
-                    которое произошло почти 5 миллиардов лет назад.
-                </p>
-
-                <figure class="quote">
-                    <i class="fa-solid fa-quote-left fa-2x fa-pull-left"></i>
-                        Такое изящнейшее соединение Солнца, планет и комет не могло произойти иначе, как по намерению и по власти могущественного и премудрого Существа
-                    <figcaption>
-                        &mdash; <a target="_blankx`" href="https://ru.citaty.net/avtory/isaak-niuton/" title="Исаак Ньютон">Исаак Ньютон</a>, английский физик, математик и астроном.
-                    </figcaption>
-                </figure>
-
-                <p>
-                    <em>Итак, каковы различия между кометами и астероидами?</em>
-                </p>
+            </a>
+            <a href="https://t.me/alxq0">
+                <div class="container-single-social-media-button">
+                    <div class="social-media-button">
+                        <img class="pic-social-media" src="images/social-media-icons/tg.png" alt="">
+                    </div>
                 </div>
-
-                <section class="section">
-                <h2 id="what-is-comet">Что такое комета?</h2>
-                <p>
-                    <img id="comet_image" src="images/comet_image.jpg" alt="Комета">
-                    <strong>Комета</strong> — небольшое небесное тело, обращающееся вокруг Солнца по весьма вытянутой орбите в виде конического сечения. Кометы сравнивают с грязными снежками. И это довольно точное описание. Тело кометы представляет собой слабо связанные между собой льдинки, пыль и камни.
-                    Ядро кометы относительно невелико – часто всего несколько километров в поперечнике. Состоит оно в основном из водяного льда и замороженного углекислого газа.
-                    Также в теле кометы, как правило, присутствуют окись углерода, метан и аммиак.
-                </p>
-                <p>
-                    <pre>
-Комета – вольный странник,
-Блуждающий во тьме,
-Между звёзд и планет извиваясь
-Подобно огромной змее.
-                    </pre>
-                </p>
-                <p>
-                    <br>Большинство комет обращается вокруг Солнца далеко за пределами планеты Нептун. И им требуются столетия для совершения одного оборота.
-                    Но орбиты некоторых комет таковы, что иногда они приближаются к Солнцу. Становясь ближе к нему, чем Земля и другие планеты.
-                    Когда это происходит, тепло Солнца заставляет ядро кометы образовывать облако пара из тающего льда (называемое комой), и хвост из газа и пыли.
-                    Этот хвост растягивается на расстояние до десятков миллионов километров. В некоторых случаях кометы и их хвосты настолько велики, что их можно наблюдать в небе невооруженным глазом.
-                </p>
-                <p>
-                    Земная орбита периодически пересекает обломки хвостов комет. Когда эти обломки попадают в атмосферу, они сгорают.
-                    При этом создаются короткие, но яркие полосы света. Они известны как падающие звезды, или метеорные потоки.
-                    Несколько метеоритных потоков можно наблюдать в одно и то же время каждый год. Пример такого явления – Персеиды.
-                    Они напоминают о себе каждый август, и связан с кометой Свифта-Таттла.
-                </p>
-                </section>
-
-                <section class="section">
-                <h2 id="comet-types">Типы комет</h2>
-                <p>
-                    Согласно теории форм комет и их хвостов, которая была разработана астрономом Федором Бредихиным еще в конце XlX века, существует несколько типов хвостов комет:
-                    <ol>
-                        <li>К первому типу относятся кометы, хвост которых является прямым и тянется в противоположную сторону от Солнца.</li>
-                        <li>Второй тип включает кометы с широким и изогнутым хвостом.</li>
-                        <li>К третьему типу относят кометы, чьи неширокие хвосты направлены вдоль их орбиты.</li>
-                    </ol>
-                </p>
-                <p>
-                    Позднее астрономы объяснили это различным составом комет, материал которых рассеивается разными способами, в зависимости от составляющих химических элементов.
-                    Можно выделить т.н. пылевые хвосты – след из газа и пыли, оставляемый кометой позади, зачастую имеет желтоватое свечение,  вызванное отраженными солнечными лучами.
-                    Другой вид хвостов носит название <i>«плазменный хвост»</i>. След такого рода образуется из газа, который под воздействием ультрафиолетового
-                    солнечного света начинает электризоваться и превращаться в плазму. Обычно имеет голубоватый оттенок.
-                </p>
-                <p>
-                    Зачастую, хвост комет направлен в противоположную сторону от Солнца, однако очень редко можно заметить кометы, хвосты которых несутся впереди них.
-                    Это вызвано тем, что от кометы во все стороны отделяются более крупные частицы, которые слабо подвержены влиянию солнечного ветра, и они остаются на орбите кометы.
-                    Большинство этого материала остается позади, но с некоторой точки зрения, кажется, что хвост опережает комету. Но есть и небольшая часть этой пыли, которая окутывает саму комету.
-                    В обоих случаях наблюдение этой пыли вызывает затруднение, на фоне более яркого, отражающего материала, образующего плазменный и пылевой хвосты.
-                </p>
-                </section>
-
-                <section class="section">
-                <h2 id="what-is-asteroid">Что такое астероид?</h2>
-                <p>
-                    <img id="asteroid_image" src="images/asteroid_image.jpg" alt="Астероид">
-                    <strong>Астероиды</strong> - это объекты Солнечной системы различной формы и относительно небольших размеров.
-                    Астероиды состоят в основном из камней и металлов. Это делает их источниками ценных минералов, которые можно добывать в космосе.
-                </p>
-                <p>
-                    Астероиды имеют размеры от нескольких метров в диаметре до размеров гор. Или даже континентов.
-                    Самый большой из известных астероидов – Церера. Его размер составляет примерно одну четверть от размера Луны.
-                    Церера считается карликовой планетой.
-                </p>
-                <p>
-                    Церера является одним из 1,9 миллиона крупных астероидов, вращающихся вокруг Солнца в поясе астероидов.
-                    Этот пояс находится между орбитами Марса и Юпитера. Некоторые астероиды иногда попадают во внутреннюю Солнечную систему.
-                    Где они (очень редко) сталкиваются с нашей планетой.
-                </p>
-                </section>
-
-                <section class="section">
-                <h2 id="asteroid-types">Типы астероидов</h2>
-                <p>
-                    Классификация астероидов проводится аналогичным образом как классификация звезд – по спектральному классу – интенсивности отражения/поглощения света.
-                    <ol>
-                        <li>Класс A – имеет высокий альбедо и красноватый цвет.
-                            Согласно расчетам, состоят из:
-                            <ul>
-                                <li>высокотемпературных оливинов;</li>
-                                <li>смеси металлов (железя и никеля) с оливином.</li>
-                            </ul>
-                        </li>
-                        <li>Классы B, C, F – углеродные астероиды, которыми представлены 75% известных астероидов. Химический состав таких тел похож на состав протопланетного диска, за исключением водорода, гелия, а также других летучих элементов, которые отсутствует в астероидах этого класса. В составе таких тел возможно наличие воды.</li>
-                        <li>Классы D, P, T – тела с низким альбедо и спектром с красным оттенком. Астероиды этого класса состоят из
-                            <ul>
-                                <li>силикатов, включающих углерод или различные органические вещества;</li>
-                                <li>возможно присутствие льда.</li>
-                            </ul>
-                        </li>
-                        <li>Класс E – отличаются наличием в своем составе такого силиката как энстатит – устойчивого к плавлению.</li>
-                        <li>Класс G – представляет астероиды с невысоким альбедо, отражающие практически бесцветное излучение. Схожи с классом C. Считается, что в состав таких тел входят низкотемпературные гидратированные (с молекулами воды) силикаты, вроде глины и слюды с элементами органических соединений или углерода.</li>
-                        <li>Классы Q и R – также как и класс A, подразумевает присутствие в составе металлов и оливина, либо пироксена (проще говоря – кремний и оксиген).</li>
-                        <li>Классы S, V и G – умеренно яркие астероиды. В основном состоят из
-                            <ul>
-                                <li>силикатов,</li>
-                                <li>железа,</li>
-                                <li>камня,</li>
-                                <li>пироксена (класс V).</li>
-                            </ul>
-                        </li>
-                    </ol>
-                </p>
-                <p>
-                    Несмотря на столь обширную классификацию, более старая и более общая включает всего три типа астероидов:
-                    <ol>
-                        <li>Класс C – включает 75% известных человечеству астероидов, имеют углеродный состав.</li>
-                        <li>Класс S – 17% открытых астероидов, силикатный состав.</li>
-                        <li>Класс M – большая часть остальных астероидов, металлический состав.</li>
-                    </ol>
-                </p>
-                </section>
-            </div>
-            </main>
-            </div>
-
-        </div>  <!-- end of wrapper -->
-    </div>  <!-- end of container -->
-
-    <footer class="footer">
-        <div class="footer__container">
-            <h3 class="title-h3">О нас</h3>
-            <p>Алексей Денисов | ИКБО-01-21</p>
-            <p>МИРЭА - Российский технологический университет</p>
-            <div class="container-social-media-buttons">
-                <a href="https://github.com/alex0d">
-                    <div class="container-single-social-media-button">
-                        <div class="social-media-button">
-                            <img class="pic-social-media" src="images/social-media-icons/github.png" alt="">
-                        </div>
+            </a>
+            <a href="">
+                <div class="container-single-social-media-button">
+                    <div class="social-media-button">
+                        <img class="pic-social-media" src="images/social-media-icons/twitter.png" alt="">
                     </div>
-                </a>
-                <a href="https://t.me/alxq0">
-                    <div class="container-single-social-media-button">
-                        <div class="social-media-button">
-                            <img class="pic-social-media" src="images/social-media-icons/tg.png" alt="">
-                        </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="container-single-social-media-button">
+                    <div class="social-media-button">
+                        <img class="pic-social-media" src="images/social-media-icons/vk.png" alt="">
                     </div>
-                </a>
-                <a href="">
-                    <div class="container-single-social-media-button">
-                        <div class="social-media-button">
-                            <img class="pic-social-media" src="images/social-media-icons/twitter.png" alt="">
-                        </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="container-single-social-media-button">
+                    <div class="social-media-button">
+                        <img class="pic-social-media" src="images/social-media-icons/youtube.png" alt="">
                     </div>
-                </a>
-                <a href="">
-                    <div class="container-single-social-media-button">
-                        <div class="social-media-button">
-                            <img class="pic-social-media" src="images/social-media-icons/vk.png" alt="">
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="container-single-social-media-button">
-                        <div class="social-media-button">
-                            <img class="pic-social-media" src="images/social-media-icons/youtube.png" alt="">
-                        </div>
-                    </div>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
-        <div class="footer__container">
-            <h3 class="title-h3">Важное</h3>
-            <ul>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Ответы на вопросы</a></li>
-                <li><a href="#">Политика конфиденциальности</a></li>
-                <li><a href="#">Помощь</a></li>
-                <li><a href="#">Правила и положения</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
-        </div>
-        <div class="footer__container">
-            <h3 class="title-h3">Разделы</h3>
-            <ul>
-                <li><a href="#">Астероиды</a></li>
-                <li><a href="#">Кометы</a></li>
-                <li><a href="#">Все небесные тела</a></li>
-                <li><a href="#">Не все небесные тела</a></li>
-                <li><a href="#">Еще какой-то пункт</a></li>
-                <li><a href="#">И последний</a></li>
-            </ul>
-        </div>
-        <div class="footer__container">
-            <h3 class="title-h3">Контакты</h3>
-            <ul>
-                <li><a href="mailto:alexey.d707@gmail.com">Написать</a></li>
-                <li><a href="tel:+">Позвонить</a></li>
-            </ul>
-        </div>
-    </footer>
-
-    <button
-            type="button"
-            class="btn btn-info btn-floating btn-lg"
-            id="btn-back-to-top"
-            style="position: fixed; bottom: 20px; right: 20px; display: none;"
-    >
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    </div>
+    <div class="footer__container">
+        <h3 class="title-h3">Важное</h3>
+        <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Ответы на вопросы</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+            <li><a href="#">Помощь</a></li>
+            <li><a href="#">Правила и положения</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </div>
+    <div class="footer__container">
+        <h3 class="title-h3">Разделы</h3>
+        <ul>
+            <li><a href="#">Астероиды</a></li>
+            <li><a href="#">Кометы</a></li>
+            <li><a href="#">Все небесные тела</a></li>
+            <li><a href="#">Не все небесные тела</a></li>
+            <li><a href="#">Еще какой-то пункт</a></li>
+            <li><a href="#">И последний</a></li>
+        </ul>
+    </div>
+    <div class="footer__container">
+        <h3 class="title-h3">Контакты</h3>
+        <ul>
+            <li><a href="mailto:alexey.d707@gmail.com">Написать</a></li>
+            <li><a href="tel:+">Позвонить</a></li>
+        </ul>
+    </div>
+</footer>
 
 </body>
 </html>
