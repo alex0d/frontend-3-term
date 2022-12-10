@@ -1,3 +1,12 @@
+const NOTIFICATION_LIST = [
+    "В Калининграде создадут космический двигатель на воде",
+    "Космическая сенсация. Что увидели ученые в Млечном Пути",
+    "ГА ООН приняла резолюцию России о неразмещении оружия в космосе",
+    "Черная дыра направила мощное излучение к Земле",
+    "В России разработали новую технологию уборки космического мусора",
+    "Космический аппарат, запущенный с космодрома Плесецк, вывели на орбиту"
+];
+
 $(function () {
     let $dropdown = $('.dropdown');
     let $dropdown_menu = $('.dropdown-menu');
@@ -27,7 +36,7 @@ $(function () {
     function changeNotification(cmd) {
         count++;
         $notification_count.text(count);
-        $dropdown_menu.prepend('<a class="dropdown-item" href="#">' + 'Новость #' + count + '</a>');
+        $dropdown_menu.prepend('<a class="dropdown-item" href="#">' + NOTIFICATION_LIST[count - 1] + '</a>');
 
         if (count > 10) {
             $dropdown_menu.find('a:last').remove();
@@ -35,24 +44,14 @@ $(function () {
     }
 
     function notificationDecorator(func) {
-        return function(cmd) {
-            if (cmd === 1) {
-                clearInterval(intervalId)
-                setTimeout(function() {
-                    func
-                    intervalId = setInterval(changeNotification, 3000, 0)
-                }, 100, cmd)
+        return function() {
+            if (count >= NOTIFICATION_LIST.length - 1) {
+                clearInterval(intervalId);
             }
-            else {
-                func.call(cmd)
-            }
-        };
+            func();
+        }
     }
 
-    let intervalId  = setInterval(changeNotification,3000, 0)
-    changeNotification = notificationDecorator(changeNotification)
-    $dropdown.on('click', function(){
-        changeNotification(1)
-    });
-
+    changeNotification = notificationDecorator(changeNotification);
+    let intervalId  = setInterval(changeNotification,15000, 0);
 })
