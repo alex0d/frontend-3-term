@@ -13,21 +13,42 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/50c9e40fe2.js" crossorigin="anonymous"></script>
     <script src="assets/js/gallery.js" defer></script>
+    <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <title>Галерея</title>
 </head>
 <body>
 
-<form action="article.html">
-    <button
-            type="submit"
-            class="btn btn-info btn-floating btn-lg"
-            id="btn-back-to-index"
-
-    >
-        <i class="fa fa-arrow-left"></i>
-    </button>
-</form>
+<header>
+    <nav class="header_navigation">
+        <div class="logo_title">
+            <img src="logo.png" alt="Астероиды и кометы">
+            <p>Астероиды и кометы</p>
+        </div>
+        <ul class="nav_links">
+            <input type="checkbox" id="checkbox_toggle">
+            <label for="checkbox_toggle" class="hamburger"><span class="hamburger_mid_line"></span></label>
+            <div class="nav_menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="about.html">О сайте</a></li>
+                <li><a href="profile.html">Профиль</a></li>
+            </div>
+        </ul>
+        <div class="dropdown">
+            <a class="me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+               role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-bell"></i>
+                <span class="badge rounded-pill badge-notification bg-danger"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <!--                <li>-->
+                <!--                    <a class="dropdown-item" href="#">Project created!</a>-->
+                <!--                </li>-->
+            </ul>
+        </div>
+    </nav>
+</header>
 
 <h1 class="text-center mb-4">Галерея небесных тел</h1>
 <section class="image-grid">
@@ -157,25 +178,24 @@
         </div>
     </div>
     <div class="footer__container">
-        <h3 class="title-h3">Важное</h3>
+        <h3 class="title-h3">Разделы</h3>
         <ul>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Ответы на вопросы</a></li>
-            <li><a href="#">Политика конфиденциальности</a></li>
-            <li><a href="#">Помощь</a></li>
-            <li><a href="#">Правила и положения</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="index.html">Главная страница</a></li>
+            <li><a href="article.html">Кратко об астероидах и кометах</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="profile.html">Профиль</a></li>
+            <li><a href="about.html">О сайте</a></li>
         </ul>
     </div>
     <div class="footer__container">
-        <h3 class="title-h3">Разделы</h3>
+        <h3 class="title-h3">Небесные тела</h3>
         <ul>
-            <li><a href="#">Астероиды</a></li>
-            <li><a href="#">Кометы</a></li>
-            <li><a href="#">Все небесные тела</a></li>
-            <li><a href="#">Не все небесные тела</a></li>
-            <li><a href="#">Еще какой-то пункт</a></li>
-            <li><a href="#">И последний</a></li>
+            <li><a href="ceres.html">Церера</a></li>
+            <li><a href="#">Веста</a></li>
+            <li><a href="#">Паллада</a></li>
+            <li><a href="halley.html">Галлея</a></li>
+            <li><a href="#">Хирон</a></li>
+            <li><a href="#">Вильда</a></li>
         </ul>
     </div>
     <div class="footer__container">

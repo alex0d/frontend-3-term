@@ -6,15 +6,8 @@
 }
 
 body {
-    padding-top: 10px;
     margin: 24px 0 48px;
     font: 20px / 28px "Marck Script", cursive;
-}
-
-@media (max-width: 700px) {
-    .notification {
-        display: none;
-    }
 }
 
 
@@ -86,44 +79,4 @@ body {
 
 .lightbox-modal .carousel-control-next {
     right: 10px;
-}
-
-
-#btn-back-to-index {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 55px;
-    height: 35px;
-    padding: 0;
-    font-size: 1.2rem;
-    border: 0;
-    border-radius: 0.25rem;
-    background: lightblue;
-    color: var(--lightbox);
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-@media(max-width: 460px) {
-    h1 {
-        padding-bottom: 15px;
-    }
-    #btn-back-to-index {
-        top: 50px;
-        left: calc(50% - 27.5px);
-        width: 55px;
-        height: 25px;
-        font-size: 1rem;
-    }
-}
-
-@media(max-width: 260px) {
-    #btn-back-to-index {
-        top: 77px;
-        left: calc(50% - 27.5px);
-        width: 55px;
-        height: 25px;
-        font-size: 1rem;
-    }
 }
