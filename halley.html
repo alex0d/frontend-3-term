@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.png" sizes="any">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/50c9e40fe2.js" crossorigin="anonymous"></script>
+  <script src="assets/js/arrow_up.js" defer></script>
+
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/article.css">
+
+  <title>Комета Галлея</title>
+</head>
+<body>
+<header>
+  <nav class="header_navigation">
+    <div class="logo_title">
+      <img src="logo.png" alt="Астероиды и кометы">
+      <p>Астероиды и кометы</p>
+    </div>
+    <ul class="nav_links">
+      <input type="checkbox" id="checkbox_toggle">
+      <label for="checkbox_toggle" class="hamburger"><span class="hamburger_mid_line"></span></label>
+      <div class="nav_menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="about.html">О сайте</a></li>
+        <li><a href="profile.html">Профиль</a></li>
+      </div>
+    </ul>
+    <div class="dropdown">
+      <a class="me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+         role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-bell"></i>
+        <span class="badge rounded-pill badge-notification bg-danger"></span>
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <!--                <li>-->
+        <!--                    <a class="dropdown-item" href="#">Project created!</a>-->
+        <!--                </li>-->
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="container-fluid overflow-hidden">
+  <div class="row overflow-auto">
+    <div class="aside col-12 col-sm-3 col-md-3 col-lg-2 col-xl-2 px-sm-2 px-0 bg-dark d-flex sticky-top">
+      <div class="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-white">
+        <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start" id="menu">
+          <li class="nav-item">
+            <a href="article.html" class="nav-link px-sm-0 px-2">
+              <img src="images/icon_cosmos.png" height="24px" width="24px"><span class="ms-1 d-none d-sm-inline">Основное</span>
+            </a>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle px-sm-0 px-1" id="dropdown-asteroid" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="images/icon_asteroid.png" height="24px" width="24px"><span class="ms-1 d-none d-sm-inline">Астероиды</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdown">
+              <li><a class="dropdown-item" href="ceres.html">Церера</a></li>
+              <li><a class="dropdown-item" href="#">Веста</a></li>
+              <li><a class="dropdown-item" href="#">Паллада</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle px-sm-0 px-1" id="dropdown-comet" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="images/icon_comet.png" height="24px" width="24px"><span class="ms-1 d-none d-sm-inline">Кометы</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdown">
+              <li><a class="dropdown-item" href="halley.html">Комета Галлея</a></li>
+              <li><a class="dropdown-item" href="#">Хирон</a></li>
+              <li><a class="dropdown-item" href="#">Вильда</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle px-sm-0 px-1" id="dropdown-sites" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fs-4 bi-grid"></i><span class="ms-1 d-none d-sm-inline">О космосе</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdown">
+              <li><a class="dropdown-item" href="https://www.roscosmos.ru/">Роскосмос</a></li>
+              <li><a class="dropdown-item" href="https://www.astronews.ru/">AstroNews</a></li>
+              <li><a class="dropdown-item" href="https://cosmos-online.ru/">Космос Онлайн</a></li>
+              <li><a class="dropdown-item" href="https://spacegid.com/">ScapeGid - гид в мире космоса</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>  <!-- end aside -->
+
+    <div class="content col d-flex flex-column h-sm-100">
+      <main class="row overflow-auto">
+        <div class="col pt-4">
+          <h2>Комета Галлея</h2>
+          <nav id="content_nav">
+            <p>Содержание:</p>
+            <ul type="square">
+              <li><a href="#intro">Введение</a></li>
+              <li><a href="#history">История наблюдения</a></li>
+              <li><a href="#middle-ages">Комета Галлея в Средние века</a></li>
+              <li><a href="#new-ages">Наблюдения в Новое время</a></li>
+              <li><a href="#in-1986">Исследования 1986 года</a></li>
+              <li><a href="#next-time">Когда мы увидим комету в следующий раз?</a></li>
+              <li><a href="#structure">Состав кометы</a></li>
+            </ul>
+          </nav>
+
+
+          <div class="beginning">
+            <img class="img-fluid row float-md-start m-3 ms-0" src="images/gallery/halley.jpg" alt="Галлея" width="400px" height="300px">
+            <p id="intro">
+              Комета Галлея (официальное название 1P/Halley) — яркая периодическая комета, возвращающаяся к Солнцу каждые 75—76 лет.  Названа в честь английского астронома Эдмунда Галлея. С кометой связаны метеорные потоки эта-Аквариды и Ориониды.
+            </p>
+            <p>
+              Комета Галлея является первой кометой, для которой определили эллиптическую орбиту и установили периодичность возвращений.
+            </p>
+            <p>
+              Несмотря на то, что каждый век появляется много более ярких долгопериодических комет, комета Галлея — единственная короткопериодическая комета, хорошо видимая невооружённым глазом.
+            </p>
+          </div>
+
+          <section class="section">
+            <h2 id="history">История наблюдения</h2>
+            <p>
+              Самым первым упоминанием появления кометы считается запись наблюдений китайских астрономов, датируемая примерно 2296 г. до н.э. Тогда это явление считалось предвестником несчастий, болезней и всевозможных катаклизмов.
+            </p>
+            <p>
+              Комета Галлея наблюдалась по крайней мере 30 раз. Сведения о её наиболее ранних появлениях можно найти в исторических хрониках разных народов.
+            </p>
+            <p>
+              <b>240 год до н.э.</b> — Первое достоверное наблюдение кометы, его описание приводится в китайских анналах «Ши цзи».
+            </p>
+            <p>
+              <b>164 год до н.э.</b> — В 1985 году Ф.Р.Стефенсон опубликовал обнаруженные им на вавилонских табличках данные о наблюдениях кометы. Дата и путь кометы на небе очень хорошо согласуются с теоретическими расчётами. На вавилонских табличках также обнаружены описания появления кометы 12 августа 87 г. до н.э.
+            </p>
+            <p>
+              В период с <b>12 год до н. э.</b> по <b>451 год</b> в основном кометы Галлея отмечается в китайских хрониках, а в античном мире она фиксируется, как предвестник грядущих бедствий и войн.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2 id="middle-ages">Комета Галлея в Средние века</h2>
+            <img class="img-fluid row float-md-start m-3 ms-0" src="images/middle_ages.jpg" alt="Галлея в Средние века" width="300px" height="200px">
+            <p>
+              Данные о каждом появлении кометы уже прослеживаются в восточной и западной цивилизации в Средние века.
+            </p>
+            <p>
+              Так в <b>684 году</b>, например, яркое появление кометы вызвало страх в Европе. Согласно «Нюрнбергской хронике», эта «хвостатая звезда» была ответственна за продолжавшиеся в течение трёх месяцев непрерывные ливни, погубившие урожай, сопровождавшиеся сильными молниями, убившими множество людей и скота.
+            </p>
+            <p>
+              <b>837 год</b> — Во время этого появления комета Галлея приблизилась на минимальное за всё время наблюдений расстояние к Земле (0,0342 а. е.). Видимая на небе длина раздвоенного хвоста в максимуме превышала 80°. Комета описана в китайских, японских, арабских и во многих европейских хрониках.
+            </p>
+            <p>
+              А в <b>1066 году</b> комета приближалась к Земле на расстояние 0,1 а. е. Её наблюдали в Китае, Корее, Японии, Византии, Армении, Египте, на арабском Востоке и на Руси. В Европе это появление является одним из самых упоминаемых в хрониках. Комета, возможно, изображена на петроглифе, находящемся в национальном парке Чако, в американском штате Нью-Мексико.
+            </p>
+            <p>
+              Кроме того, записи о наблюдении кометы Галлея позволяют уточнить даты некоторых событий в русской истории. Так появление кометы Галлея в <b>1222 г. н. э.</b> предшествовало монголо-татарскому нашествию.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2 id="new-ages">Наблюдения в Новое время</h2>
+            <p>
+              <b>1456 год</b> знаменует начало астрономических исследований кометы. Её обнаружили в Китае 26 мая. Наиболее ценные наблюдения кометы сделал итальянский врач и астроном Паоло Тосканелли, который почти каждый день аккуратно измерял её координаты с 8 июня по 8 июля. Важные наблюдения сделал также австрийский астроном Георг Пурбах, который впервые попытался измерить параллакс кометы и обнаружил, что комета находится от наблюдателя на расстоянии «более тысячи германских миль».
+            </p>
+            <p>
+              Комету в XVI-XVII веках наблюдали Петер Апиан, Иоганн Кеплер, а также Эдмунд Галлей, который обнаружил сходство орбит комет в 1531, 1607 и 1682 годах, и предположил, что это одна периодическая комета, и предсказал следующее появление.
+            </p>
+            <img class="img-fluid row float-md-start m-3 ms-0" src="images/halley_1910.jpg" alt="Галлея в 1910" width="300px" height="200px">
+            <p>
+              В <b>1910 году</b> комета Галлея впервые была сфотографирована и впервые получены спектральные данные о её составе.
+            </p>
+            <p>
+              В ходе многочисленных исследований было получено около 500 фотографий головы и хвоста кометы, около 100 спектрограмм. Было также выполнено большое число определений положения кометы, уточнивших её орбиту, что имело большое значение при планировании программы исследований с помощью космических аппаратов в преддверии следующего появления 1986 года.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2 id="in-1986">Исследования 1986 года</h2>
+            <p>
+              Приближение кометы Галлея было впервые зарегистрировано астрономами Джуиттом и Даниельсоном 16 октября 1982 года. С 1984 по 1987 год осуществлялись две программы по наблюдениям кометы:
+              <ul>
+                <li>советская СоПроГ;</li>
+                <li>международная программа The International Halley Watch (IHW).</li>
+              </ul>
+            </p>
+            <p>
+              Уровень развития космонавтики к этому времени предоставил учёным возможность исследовать комету в непосредственной близости, для чего было запущено несколько космических аппаратов, а также межпланетные станции <b>«Вега-1»</b> и <b>«Вега-2»</b>. Они передавали фотографии кометы, ее ядра, кольцевых кратеров. По снимкам также была оценена характеристика пыли и отражательная способность.
+            </p>
+            <img class="img-fluid row float-md-start m-3 ms-0" src="images/halley_1986.jpg" alt="Галлея в 1986 году" width="300px" height="200px">
+            <p>
+              В общей сложности оба аппарата передали на Землю более 1500 изображений, в том числе около 70 изображений ядра.
+            </p>
+            <p>
+              Комета наблюдалась из космоса при помощи телескопов различного вида и мощности, в том числе и с орбиты.Определённый вклад в изучение кометы Галлея внесли также два японских аппарата: «Суйсэй»  и «Сакигакэ».
+            </p>
+          </section>
+
+          <section class="section">
+            <h2 id="next-time">Когда мы увидим комету в следующий раз?</h2>
+            <p>
+              Ученые ожидают, что ближайший прилет кометы Галлея случится предположительно <b>28 июля 2061 года</b>.
+            </p>
+            <p>
+              Вероятно, он станет одним из наиболее значимых событий в современной астрономии, ибо перигелий объекта, как и сама Земля будут располагаться по одну сторону от Солнца. Специалисты НАСА считают, что во время прилета 2061 года комету можно будет увидеть невооруженным глазом на протяжении четырех месяцев. Не вызывает сомнения, что земляне смогут насладиться потрясающим по красоте зрелищем, особенно в предрассветные и предзакатные часы.
+            </p>
+            <p>
+              После прохождения перигелия комета Галлея исчезнет с нашего небосвода и отправится в темные глубины космоса. Ее следующее появление ожидается в 2134 году: перигелий – 27 марта, а 7 мая она приблизится к Земле на 0,09 а. е. В это время ее видимая величина будет составлять примерно −2,0m. Погрешность предсказанной даты колеблется от нескольких месяцев до 5 лет.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2 id="structure">Состав кометы</h2>
+            <img class="img-fluid row float-md-start m-3 ms-0" src="images/halley_inside.jpg" alt="Состав кометы Галлея" width="300px" height="200px">
+            <p>
+              Ядро Галлеи в диаметре всего 10 километров и состоит изо льдов различных соединений, камней, металла и частиц. При нагреве головы часть льда испаряется, и освободившиеся частицы создают газово-пылевое облако. Спектральный анализ показал наличие в атмосфере кометы органических молекул. Это стало основой предположений ученых о внеземном происхождении жизни на планете Земля.
+            </p>
+          </section>
+
+        </div>
+      </main>
+    </div>
+
+  </div>  <!-- end of wrapper -->
+</div>  <!-- end of container -->
+
+<footer class="footer">
+  <div class="footer__container">
+    <h3 class="title-h3">О нас</h3>
+    <p>Алексей Денисов | ИКБО-01-21</p>
+    <p>МИРЭА - Российский технологический университет</p>
+    <div class="container-social-media-buttons">
+      <a href="https://github.com/alex0d">
+        <div class="container-single-social-media-button">
+          <div class="social-media-button">
+            <img class="pic-social-media" src="images/social-media-icons/github.png" alt="">
+          </div>
+        </div>
+      </a>
+      <a href="https://t.me/alxq0">
+        <div class="container-single-social-media-button">
+          <div class="social-media-button">
+            <img class="pic-social-media" src="images/social-media-icons/tg.png" alt="">
+          </div>
+        </div>
+      </a>
+      <a href="">
+        <div class="container-single-social-media-button">
+          <div class="social-media-button">
+            <img class="pic-social-media" src="images/social-media-icons/twitter.png" alt="">
+          </div>
+        </div>
+      </a>
+      <a href="">
+        <div class="container-single-social-media-button">
+          <div class="social-media-button">
+            <img class="pic-social-media" src="images/social-media-icons/vk.png" alt="">
+          </div>
+        </div>
+      </a>
+      <a href="">
+        <div class="container-single-social-media-button">
+          <div class="social-media-button">
+            <img class="pic-social-media" src="images/social-media-icons/youtube.png" alt="">
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="footer__container">
+    <h3 class="title-h3">Важное</h3>
+    <ul>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Ответы на вопросы</a></li>
+      <li><a href="#">Политика конфиденциальности</a></li>
+      <li><a href="#">Помощь</a></li>
+      <li><a href="#">Правила и положения</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </div>
+  <div class="footer__container">
+    <h3 class="title-h3">Разделы</h3>
+    <ul>
+      <li><a href="#">Астероиды</a></li>
+      <li><a href="#">Кометы</a></li>
+      <li><a href="#">Все небесные тела</a></li>
+      <li><a href="#">Не все небесные тела</a></li>
+      <li><a href="#">Еще какой-то пункт</a></li>
+      <li><a href="#">И последний</a></li>
+    </ul>
+  </div>
+  <div class="footer__container">
+    <h3 class="title-h3">Контакты</h3>
+    <ul>
+      <li><a href="mailto:alexey.d707@gmail.com">Написать</a></li>
+      <li><a href="tel:+">Позвонить</a></li>
+    </ul>
+  </div>
+</footer>
+
+<button
+        type="button"
+        class="btn btn-info btn-floating btn-lg"
+        id="btn-back-to-top"
+        style="position: fixed; bottom: 20px; right: 20px; display: none;"
+>
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+</body>
+</html>

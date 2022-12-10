@@ -34,17 +34,6 @@ section h2 {
     border-radius: 10px;
 }
 
-#comet_image, #asteroid_image {
-    float: left;
-    margin: 0 10px 10px 0;
-}
-
-@media (max-width: 445px) {
-    #comet_image, #asteroid_image {
-        display: none;
-    }
-}
-
 #arrow_up {
     position: fixed;
     float: right;
