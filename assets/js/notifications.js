@@ -36,7 +36,7 @@ $(function () {
     function changeNotification(cmd) {
         count++;
         $notification_count.text(count);
-        $dropdown_menu.prepend('<a class="dropdown-item" href="#">' + NOTIFICATION_LIST[count - 1] + '</a>');
+        $dropdown_menu.prepend('<a class="dropdown-item text-wrap" href="#">' + NOTIFICATION_LIST[count - 1] + '</a>');
 
         if (count > 10) {
             $dropdown_menu.find('a:last').remove();
