@@ -1,28 +1,37 @@
 body {
     margin: 0;
     background-color: white;
+    display: -ms-grid;
     display: grid;
     grid-template-areas:
         "header"
         "main"
         "footer";
+    -ms-grid-rows: auto 5px auto 5px auto;
     grid-template-rows: auto auto auto;
+    -ms-grid-columns: auto;
     grid-template-columns: auto;
     grid-gap: 5px 5px;
 }
 
 
 .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     /*background-color: aquamarine;*/
     grid-area: header;
 }
 
 .content {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
     /*background-color: #242930;*/
     grid-area: main;
 }
 
 .footer {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
     margin-top: 50px;
     grid-area: footer;
 }
@@ -44,12 +53,17 @@ body {
     font-weight: 500;
     background: transparent;
     cursor: pointer;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     position: relative;
     display: inline-block;
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(255,255,255,.5),
+    7px 7px 20px 0 rgba(0,0,0,.1),
+    4px 4px 5px 0 rgba(0,0,0,.1);
     box-shadow: 2px 2px 2px 0 rgba(255,255,255,.5),
-                      7px 7px 20px 0 rgba(0,0,0,.1),
-                      4px 4px 5px 0 rgba(0,0,0,.1);
+    7px 7px 20px 0 rgba(0,0,0,.1),
+    4px 4px 5px 0 rgba(0,0,0,.1);
     outline: none;
 }
 
@@ -60,59 +74,90 @@ body {
     right: 20px;
     bottom: 20px;
     border:none;
+    -webkit-box-shadow: none;
     box-shadow: none;
     width: 130px;
     height: 40px;
     line-height: 42px;
+    -webkit-perspective: 230px;
     perspective: 230px;
 }
 
 .btn-log-in span {
     background: rgb(0,172,238);
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0,172,238,1)), to(rgba(2,126,251,1)));
+    background: -o-linear-gradient(bottom, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
     background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
     display: block;
     position: absolute;
     width: 130px;
     height: 40px;
+    -webkit-box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
     7px 7px 20px 0px rgba(0,0,0,.1),
     4px 4px 5px 0px rgba(0,0,0,.1);
     border-radius: 5px;
     margin:0;
     text-align: center;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 .btn-log-in span:nth-child(1) {
+    -webkit-box-shadow:
+            -7px -7px 20px 0px #fff9,
+            -4px -4px 5px 0px #fff9,
+            7px 7px 20px 0px #0002,
+            4px 4px 5px 0px #0001;
     box-shadow:
             -7px -7px 20px 0px #fff9,
             -4px -4px 5px 0px #fff9,
             7px 7px 20px 0px #0002,
             4px 4px 5px 0px #0001;
+    -webkit-transform: rotateX(90deg);
     transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -ms-transform-origin: 50% 50% -20px;
     transform-origin: 50% 50% -20px;
 }
 .btn-log-in span:nth-child(2) {
+    -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -ms-transform-origin: 50% 50% -20px;
     transform-origin: 50% 50% -20px;
 }
 .btn-log-in:hover span:nth-child(1) {
+    -webkit-box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
     7px 7px 20px 0px rgba(0,0,0,.1),
     4px 4px 5px 0px rgba(0,0,0,.1);
+    -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
 }
 .btn-log-in:hover span:nth-child(2) {
+    -webkit-box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
     7px 7px 20px 0px rgba(0,0,0,.1),
     4px 4px 5px 0px rgba(0,0,0,.1);
     color: transparent;
+    -webkit-transform: rotateX(-90deg);
     transform: rotateX(-90deg);
 }
 
 
 /*Кнопка отправки формы*/
 .btn-submit {
+    background: -webkit-gradient(linear, right top, left top, from(cornflowerblue), to(deepskyblue));
+    background: -o-linear-gradient(right, cornflowerblue 0%, deepskyblue 100%);
     background: linear-gradient(-90deg, cornflowerblue 0%, deepskyblue 100%);
     border-radius: 5px;
     line-height: 42px;
@@ -133,11 +178,18 @@ body {
     right: 0;
     bottom: 0;
     background: deepskyblue;
+    -webkit-box-shadow:
+            -7px -7px 20px 0px rgba(255,255,255,.9),
+            -4px -4px 5px 0px rgba(255,255,255,.9),
+            7px 7px 20px 0px rgba(0,0,0,.2),
+            4px 4px 5px 0px rgba(0,0,0,.3);
     box-shadow:
             -7px -7px 20px 0px rgba(255,255,255,.9),
             -4px -4px 5px 0px rgba(255,255,255,.9),
             7px 7px 20px 0px rgba(0,0,0,.2),
             4px 4px 5px 0px rgba(0,0,0,.3);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 .btn-submit:before{
@@ -165,11 +217,18 @@ body {
     left: 0;
     top: 0;
     background: deepskyblue;
+    -webkit-box-shadow:
+            -7px -7px 20px 0px rgba(255,255,255,.9),
+            -4px -4px 5px 0px rgba(255,255,255,.9),
+            7px 7px 20px 0px rgba(0,0,0,.2),
+            4px 4px 5px 0px rgba(0,0,0,.3);
     box-shadow:
             -7px -7px 20px 0px rgba(255,255,255,.9),
             -4px -4px 5px 0px rgba(255,255,255,.9),
             7px 7px 20px 0px rgba(0,0,0,.2),
             4px 4px 5px 0px rgba(0,0,0,.3);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 .btn-submit span:before {
@@ -205,9 +264,14 @@ body {
     z-index: -1;
     background-color: navy;
     border-radius: 5px;
+    -webkit-box-shadow: 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
     box-shadow: 2px 2px 2px 0px rgba(255,255,255,.5),
-                7px 7px 20px 0px rgba(0,0,0,.1),
-                4px 4px 5px 0px rgba(0,0,0,.1);
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 .btn-reset:hover {
@@ -229,10 +293,13 @@ body {
 }
 
 #reg_window * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 form {
+    width:-webkit-fit-content;
+    width:-moz-fit-content;
     width:fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -247,10 +314,18 @@ form {
 #reg_fieldset {
     border-radius: 7px;
     border: steelblue 2px solid;
+    -webkit-box-shadow: 0 10px 20px 2px rgba(0,0,0,0.2);
     box-shadow: 0 10px 20px 2px rgba(0,0,0,0.2);
     width:100%;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:column;
     flex-direction:column;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
     align-items:center;
 }
 
@@ -285,7 +360,11 @@ legend {
 }
 
 .elem_form {
+    -webkit-box-flex:1;
+    -ms-flex:1;
     flex:1;
+    height:-webkit-fit-content;
+    height:-moz-fit-content;
     height:fit-content;
     margin: auto auto 20px;
     position:relative;
@@ -295,6 +374,26 @@ legend {
 label {
     display:block;
     margin-bottom:10px;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+input::-moz-placeholder {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+input:-ms-input-placeholder {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+input::-ms-input-placeholder {
+    font-size: 1.2rem;
+    text-align: left;
 }
 
 input::placeholder {
@@ -334,6 +433,8 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, input[ty
     width: 100%;
     border-radius: 4px;
     padding: 10px;
+    -webkit-transition:all 0.5s;
+    -o-transition:all 0.5s;
     transition:all 0.5s;
     font-size: 16px;
     text-align: center;
@@ -348,11 +449,18 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, input[ty
 }
 
 .multiple_answers{
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
 }
 
 .multiple_answers .multiple_answers_title_button {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     height: 25px;
     line-height: 25px;
@@ -375,6 +483,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, input[ty
 form {
     position: relative;
     background-color: rgba(0, 111, 255, 0.16);
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     border: 2px solid rgba(0, 111, 255, 0.39);
     border-radius: 1.5rem;
@@ -412,6 +521,22 @@ form {
     padding: 0.5rem 1rem;
     border-radius: 1rem;
 }
+.input-box input::-webkit-input-placeholder{
+    font-size: 1.2rem;
+    color: black;
+}
+.input-box input::-moz-placeholder{
+    font-size: 1.2rem;
+    color: black;
+}
+.input-box input:-ms-input-placeholder{
+    font-size: 1.2rem;
+    color: black;
+}
+.input-box input::-ms-input-placeholder{
+    font-size: 1.2rem;
+    color: black;
+}
 .input-box input::placeholder{
     font-size: 1.2rem;
     color: black;
@@ -420,6 +545,8 @@ form {
     margin: 1px 1px 1px 0;
     cursor: pointer;
     max-width: 90%;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
     background-color: white;
     color: rgb(67, 71, 78);
@@ -441,16 +568,30 @@ form {
 }
 
 .login-and-captcha {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .captcha {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     visibility: hidden;
     opacity: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     max-width: 90%;
     font-size: 1.3rem;
@@ -460,9 +601,13 @@ form {
     padding: 0.1rem 0;
     border-radius: 1rem;
     margin: 1px 1px 1px 0;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
     background-color: white;
     color: rgb(67, 71, 78);
+    -webkit-transition: visibility 0s, opacity 0.2s ease-out;
+    -o-transition: visibility 0s, opacity 0.2s ease-out;
     transition: visibility 0s, opacity 0.2s ease-out;
 }
 
@@ -477,12 +622,21 @@ form {
 .captcha #captcha-generated {
     text-align: center;
     padding: 5px 5px;
+    -webkit-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
     transition: color 0.2s ease-out;
 }
 
 .captcha-user-enter {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     max-width: 95%;
     height: auto;
@@ -493,12 +647,16 @@ form {
     padding: 0.1rem 0;
     border-radius: 1rem;
     margin: 1px 1px 1px 0;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
     background-color: white;
     color: rgb(67, 71, 78);
 }
 
 .captcha #captcha-enter {
+    -webkit-transition: border-color 0.2s ease-out;
+    -o-transition: border-color 0.2s ease-out;
     transition: border-color 0.2s ease-out;
 }
 
@@ -511,6 +669,8 @@ form {
 }
 
 .captcha button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     height: auto;
     padding: 1px 5px;
@@ -560,6 +720,7 @@ form {
     position: absolute;
     border-radius: 1rem;
     background-color: rgba(0, 111, 255, 0.16);
+    -webkit-animation: square_animation 10s calc(-1s * var(--delta)) linear infinite;
     animation: square_animation 10s calc(-1s * var(--delta)) linear infinite;
 }
 
@@ -608,11 +769,23 @@ form {
     width: 70%;
     margin: 0 auto;
 }
-@keyframes square_animation {
+@-webkit-keyframes square_animation {
     0%, 100%{
+        -webkit-transform: translateY(-2rem);
         transform: translateY(-2rem);
     }
     50%{
+        -webkit-transform: translateY(2rem);
+        transform: translateY(2rem);
+    }
+}
+@keyframes square_animation {
+    0%, 100%{
+        -webkit-transform: translateY(-2rem);
+        transform: translateY(-2rem);
+    }
+    50%{
+        -webkit-transform: translateY(2rem);
         transform: translateY(2rem);
     }
 }
@@ -626,10 +799,25 @@ form {
         width: 100%;
     }
     .input-box{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     .input-box input{
         width: 100%;
+    }
+    .input-box input::-webkit-input-placeholder {
+        font-size: 0.9rem;
+    }
+    .input-box input::-moz-placeholder {
+        font-size: 0.9rem;
+    }
+    .input-box input:-ms-input-placeholder {
+        font-size: 0.9rem;
+    }
+    .input-box input::-ms-input-placeholder {
+        font-size: 0.9rem;
     }
     .input-box input::placeholder {
         font-size: 0.9rem;
@@ -642,6 +830,9 @@ form {
         width: 100%;
     }
     .login-and-captcha{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     .captcha{
@@ -649,8 +840,15 @@ form {
         justify-items: center;
     }
     .captcha-user-enter{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
     .captcha input[type=text]{

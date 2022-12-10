@@ -22,7 +22,11 @@ section h2 {
 
 .title {
     font-size: xx-large;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -30,6 +34,7 @@ section h2 {
     margin: 5px;
     padding: 0 5px 2px;
     background: white;
+    -webkit-box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
     box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
     border-radius: 10px;
 }

@@ -1,8 +1,12 @@
 .logo_title {
     margin-right: auto;
     margin-left: 10px;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
     justify-content:left;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
     align-items:center;
     height:60px;
 }
@@ -32,8 +36,14 @@
 }
 
 .header_navigation{
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
     align-items:center;
+    -webkit-box-pack:end;
+    -ms-flex-pack:end;
     justify-content:end;
     padding: 10px 10px 5px 10px;
     border-bottom: 2px solid cornflowerblue;
@@ -52,14 +62,25 @@
 
 .nav_menu {
     z-index: 9999;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     font-size: 18px;
 }
 
 .nav_menu li {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:row;
     flex-direction:row;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
     align-items:center;
+    -webkit-box-pack:justify;
+    -ms-flex-pack:justify;
     justify-content:space-between;
     padding: 5px 15px;
 }
@@ -72,6 +93,8 @@
 }
 
 .nav_menu li a:hover{
+    -webkit-transform:scale(1.1);
+    -ms-transform:scale(1.1);
     transform:scale(1.1);
 }
 
@@ -104,6 +127,8 @@
     content:"";
     display:block;
     position:absolute;
+    -webkit-transition:all .3s;
+    -o-transition:all .3s;
     transition:all .3s;
 }
 
@@ -124,8 +149,16 @@
 }
 
 .celestial_bodies_ul {
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
     transform-origin: top;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    -o-transition: transform .3s;
     transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    -webkit-transform: scale(1,0);
+    -ms-transform: scale(1,0);
     transform: scale(1,0);
     display: block;
     position: absolute;
@@ -134,38 +167,59 @@
 }
 
 .celestial_bodies_ul li{
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:row;
     flex-direction:row;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
     align-items:center;
+    -webkit-box-pack:justify;
+    -ms-flex-pack:justify;
     justify-content:space-between;
     padding: 5px 5px 15px 3px;
 }
 
 .celestial_bodies_ul li a{
     -webkit-transition: transform .3s  ;
+    -webkit-transform-origin:left;
+    -ms-transform-origin:left;
     transform-origin:left;
 }
 
 .celestial_bodies_ul li a:hover{
+    -webkit-transform:scale(1.1, 1.1);
+    -ms-transform:scale(1.1, 1.1);
     transform:scale(1.1, 1.1);
 }
 
 #checkbox_toggle_drop_menu:checked ~ .celestial_bodies_ul {
+    -webkit-transform: scale(1,1);
+    -ms-transform: scale(1,1);
     transform: scale(1,1);
 }
 
 
 #checkbox_toggle_drop_menu:checked ~ #label_checkbox_drop_menu {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1);
 
 }
 
 #label_checkbox_drop_menu {
     color: black;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
 }
 
 #label_checkbox_drop_menu:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
 
@@ -181,7 +235,11 @@
     }
 
     .nav_menu {
+        -webkit-transform: scale(1,0);
+        -ms-transform: scale(1,0);
         transform: scale(1,0);
+        -webkit-transform-origin:top;
+        -ms-transform-origin:top;
         transform-origin:top;
         display: block;
         max-height: 0;
@@ -192,6 +250,8 @@
         right: 0;
         left: 0;
         margin-top: 5px;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
         transition: all .3s;
     }
 
@@ -201,13 +261,25 @@
     }
 
     .nav_menu li {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         text-align: center;
         padding: 5px 15px;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
         transition: all .5s;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -ms-flex-line-pack: center;
         align-content: center;
         height:43px;
         border-bottom:2px solid white;
@@ -231,13 +303,21 @@
         right: 0;
         left: 0;
         margin-top: 0;
+        -webkit-transition: all .3s  ;
+        -o-transition: all .3s  ;
         transition: all .3s  ;
     }
 
     .celestial_bodies_div {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         position:absolute;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         background-color: transparent;
         right: 0;
@@ -254,13 +334,23 @@
 
     .celestial_bodies_div li {
         display: inline-block;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         text-align: center;
         padding: 0 15px;
         height:fit-content;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
         transition: all .5s;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -ms-flex-line-pack: center;
         align-content: center;
         border-bottom:0 solid white;
     }
@@ -270,6 +360,8 @@
     }
 
     #checkbox_toggle_drop_menu:checked ~ .celestial_bodies_ul {
+        -webkit-transform: scale(1,1);
+        -ms-transform: scale(1,1);
         transform: scale(1,1);
         background-color: white;
         display: block;
@@ -285,6 +377,8 @@
     }
 
     #checkbox_toggle:checked ~ .nav_menu {
+        -webkit-transform: scale(1,1);
+        -ms-transform: scale(1,1);
         transform: scale(1,1);
         display: block;
         max-height: 100%;
@@ -307,11 +401,15 @@
 
 
     #checkbox_toggle:checked ~ .hamburger .hamburger_mid_line::before {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
         transform: rotate(-45deg);
         top:0;
     }
 
     #checkbox_toggle:checked ~ .hamburger .hamburger_mid_line::after {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
         transform: rotate(45deg);
         top:0;
     }
