@@ -51,58 +51,41 @@
     </header>
 
     <main>
-        <div class="content">
-            <h1>О сайте</h1>
-            <p>Этот сайт создан для того, чтобы люди могли узнать больше о кометах и астероидах.</p>
-            <p>На сайте есть каталог небесных тел, где вы можете узнать больше о каждом из них.</p>
-            <p>Также на сайте есть возможность зарегистрироваться и создать свой профиль.</p>
+        <h2 class="title-h2 text-center">О сайте</h2>
 
-<!--            <div class="video_div">-->
-<!--                <iframe src="video_about.html" width="740px" height="425px"></iframe>-->
-<!--            </div>-->
-
-            <div class="video-wrapper">
-                <video class="video" src="video.mp4"
-                       controls
-                       muted
-                       preload="metadata"
-                       poster="images/video_poster.jpg"
-                       style="display: block; margin: auto"></video>
-<!--                <div class="overlay-header">-->
-<!--                    <h3>Метеор? Метеорит? Комета? Астероид?</h3>-->
-<!--                    <p>Посмотри видео и узнай, чем они отличаются!</p>-->
-<!--                </div>-->
+        <div class="row content justify-content-evenly">
+            <div class="col-10 col-md-5 description">
+                <p class="h5">Космос всегда был для человечества одной из самых ярких и сложных тайн мироздания. Её разгадке посвящали себя самые светлые умы.</p>
+                <p class="h5">На этом сайте вы найдете самые главные и интересные факты об астероидах и кометах, а также самые яркие и красивые фотографии космоса!</p>
+                <br>
+                <p class="h5">Чтобы узнать еще больше, рекомендуем посетить музеи и планетарии, отмеченные на карте</p>
+                <div class="ya_map">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A774b9d2f64f933b314b0ec5834ad33313a03e5f3e77710e6aafd870bae1eecff&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
             </div>
 
-            <div class="form__container">
-                <h2 class="title">Оставьте свой отзыв о сайте</h2>
-                <form action="">
-                    <div class="form">
-                        <div>
-                            <label for="name">Имя</label>
-                            <input class="form__text" type="text" id="name">
-                        </div>
-                        <div>
-                            <label for="surname">Фамилия</label>
-                            <input class="form__text" type="text" id="surname">
-                        </div>
-                        <div>
-                            <label for="mail">Почта</label>
-                            <input class="form__text" type="email" name="mail" id="mail">
-                        </div>
-                        <div>
-                            <label for="phone">Телефон (необязательно)</label>
-                            <input class="form__text" type="tel" name="phone" id="phone">
-                        </div>
-                        <div class="form__long_text">
-                            <label for="message">Ваши пожелания</label>
-                            <input class="form__text" type="text" id="message">
-                        </div>
+            <div class="col-8 col-md-4 mt-5 mt-md-0 feedback_container">
+                <h4>Пожалуйста, оставьте свой отзыв о нашем сайте</h4>
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="name">Ваше имя:</label>
+                        <input type="name" name="name" class="form-control" id="name" placeholder="Введите своё имя" required>
                     </div>
-                    <input class="button" type="submit" value="Отправить">
+                    <div class="form-group">
+                        <label for="email1">E-mail:</label>
+                        <input type="email" name="email" class="form-control" id="email1" placeholder="Введите свой email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Номер телефона (необязательно):</label>
+                        <input type="phone" name="phone" class="form-control" id="phone" placeholder="Введите номер телефона">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение:</label>
+                        <textarea class="form-control" name="message" rows="3" placeholder="Ваши пожелания"  required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-info">Отправить сообщение</button>
                 </form>
             </div>
-
         </div>
 
     </main>
