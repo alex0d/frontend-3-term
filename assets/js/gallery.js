@@ -7,11 +7,10 @@ const modalBody = document.querySelector(".modal-body .container-fluid");
 
 for (const link of links) {
     link.addEventListener("click", function (e) {
-        e.preventDefault();
-        const currentImg = link.querySelector("img");
-        const lightboxCarousel = document.getElementById("lightboxCarousel");
-        if (lightboxCarousel) {
-            console.log("carousel exists");
+        e.preventDefault();  // Prevent the default behavior of the link
+        const currentImg = link.querySelector("img");  // Get the image inside the link
+        const lightboxCarousel = document.getElementById("lightboxCarousel");  // Get the carousel
+        if (lightboxCarousel) {  // If the carousel already exists, just update the slides
             const parentCol = link.parentElement.parentElement;
             const index = [...parentCol.parentElement.children].indexOf(parentCol);
             const bsCarousel = new bootstrap.Carousel(lightboxCarousel);
@@ -24,8 +23,7 @@ for (const link of links) {
 }
 
 function createCarousel(img) {
-    console.log(img);
-    const markup = `
+    modalBody.innerHTML = `
     <div id="lightboxCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         ${createSlides(img)}
@@ -40,8 +38,6 @@ function createCarousel(img) {
       </button>
     </div>
     `;
-
-    modalBody.innerHTML = markup;
 }
 
 function createSlides(img) {
@@ -54,11 +50,11 @@ function createSlides(img) {
         const imgCaption = img.getAttribute("data-caption");
 
         markup += `
-    <div class="carousel-item ${currentImgSrc === imgSrc ? " active" : ""}"  data-bs-interval="false">
-      <img src=${imgSrc} alt=${imgAlt}>
-      ${imgCaption ? createCaption(imgCaption) : ""}
-    </div>
-    `;
+        <div class="carousel-item ${currentImgSrc === imgSrc ? " active" : ""}"  data-bs-interval="false">
+          <img src=${imgSrc} alt=${imgAlt}>
+          ${imgCaption ? createCaption(imgCaption) : ""}
+        </div>
+        `;
     }
 
     return markup;
@@ -66,8 +62,8 @@ function createSlides(img) {
 
 function createCaption(caption) {
     return `<div class="carousel-caption">
-     <p class="m-0">${caption}</p>
-    </div>`;
+            <p class="m-0">${caption}</p>
+            </div>`;
 }
 
 $(function () {
@@ -76,20 +72,3 @@ $(function () {
         interval: false
     });
 })
-
-let to_index_button = document.getElementById("btn-back-to-index");
-
-window.onscroll = function () {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    if (
-        document.body.scrollTop > 50 ||
-        document.documentElement.scrollTop > 50
-    ) {
-        to_index_button.style.display = "none";
-    } else {
-        to_index_button.style.display = "block";
-    }
-}

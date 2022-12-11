@@ -1,25 +1,19 @@
-//Get the button
-let mybutton = document.getElementById("btn-back-to-top");
+let backToTopButton = document.getElementById("btn-back-to-top");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-    scrollFunction();
-};
+window.onscroll = () => scrollFunction();
 
 function scrollFunction() {
-    if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
-    ) {
-        mybutton.style.display = "block";
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {  // Scrolled more than 20px
+        backToTopButton.style.display = "block";  // Show the button
     } else {
-        mybutton.style.display = "none";
+        backToTopButton.style.display = "none";  // Hide the button
     }
 }
-// When the user clicks on the button, scroll to the top of the document
-mybutton.addEventListener("click", backToTop);
+
+backToTopButton.addEventListener("click", backToTop);
 
 function backToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;  // For Safari
+    document.documentElement.scrollTop = 0;  // For Chrome, Firefox, IE and Opera
 }
+
