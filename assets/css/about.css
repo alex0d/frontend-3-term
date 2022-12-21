@@ -61,3 +61,27 @@ body {
 .ya_map {
     height: 300px;
 }
+
+@media (min-width: 1500px) {
+    .text-center {
+        font-size: 3.5em;
+    }
+    .content p {
+        font-size: 2em;
+    }
+    .content h4 {
+        font-size: 2em;
+    }
+    .content form {
+        font-size: 1.8em;
+    }
+    .content form input {
+        font-size: 1em;
+    }
+    .content form textarea {
+        font-size: 1em;
+    }
+    .content form button {
+        font-size: 1em !important;
+    }
+}

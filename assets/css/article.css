@@ -46,3 +46,22 @@ section h2 {
     right: 0;
     margin-right: 30px;
 }
+
+@media (min-width: 1500px) {
+    .content {
+        font-size: 2em;
+    }
+    .content h2 {
+        font-size: 1.6em;
+    }
+    .content .img-fluid {
+        width: 30%;
+    }
+
+    .aside {
+        font-size: 2.2em;
+    }
+    .aside .dropdown-menu {
+        font-size: 1em;
+    }
+}

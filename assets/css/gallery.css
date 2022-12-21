@@ -87,3 +87,20 @@ body {
 .lightbox-modal .carousel-control-next {
     right: 10px;
 }
+
+@media (min-width: 1500px) {
+    .text-center {
+        font-size: 3.5em;
+        margin-top: 7px;
+    }
+    .carousel-caption {
+        font-size: 1.7em;
+    }
+}
+
+@media (min-width: 500px) {
+    .image-grid {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+}

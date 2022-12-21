@@ -860,3 +860,35 @@ form {
         height: 30px;
     }
 }
+
+@media (min-width: 1500px) {
+    form .title-login {
+        font-size: 2.5em;
+    }
+    form .title-login::before {
+        top: 1.2em;
+    }
+    form .input-box input[type=email] {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+    }
+    form .input-box input[type=password] {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+    }
+    form .input-box input::placeholder {
+        font-size: 1.7em;
+    }
+    form .input-box input[type=submit] {
+        font-size: 2em;
+    }
+    .additional-options {
+        font-size: 1.5em;
+    }
+    .captcha p {
+        font-size: 1em;
+    }
+    .captcha {
+        font-size: 2em;
+    }
+}

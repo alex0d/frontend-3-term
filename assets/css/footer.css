@@ -197,3 +197,15 @@
         display: none;
     }
 }
+
+@media (min-width: 1500px) {
+    .footer p {
+        font-size: 1.5em;
+    }
+    .footer a {
+        font-size: 1.5em;
+    }
+    .footer h3 {
+        font-size: 2.2em;
+    }
+}

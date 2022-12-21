@@ -425,3 +425,24 @@
         display:none;
     }
 }
+
+@media (min-width: 1500px) {
+    .header_navigation {
+        padding-bottom: 15px;
+    }
+    .header_navigation .logo_title p {
+        font-size: 3em;
+    }
+    .header_navigation .nav_menu {
+        font-size: 1.9em;
+    }
+    .header_navigation .dropdown {
+        font-size: 1.7em;
+    }
+    .header_navigation .dropdown-item {
+        font-size: 1.5em;
+    }
+    .header_navigation {
+        border-bottom: 4px solid cornflowerblue;
+    }
+}
