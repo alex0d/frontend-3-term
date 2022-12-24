@@ -49,17 +49,17 @@ section h2 {
 
 @media (min-width: 1500px) {
     .content {
-        font-size: 1.75em;
+        font-size: 1.3em;
     }
     .content h2 {
-        font-size: 1.6em;
+        font-size: 1.2em;
     }
     .content .img-fluid {
         width: 30%;
     }
 
     .aside {
-        font-size: 2.1em;
+        font-size: 1.65em;
     }
     .aside .dropdown-menu {
         font-size: 1em;

@@ -64,16 +64,16 @@ body {
 
 @media (min-width: 1500px) {
     .text-center {
-        font-size: 3.5em;
+        font-size: 2.5em;
     }
     .content p {
-        font-size: 2em;
+        font-size: 1.3em;
     }
     .content h4 {
-        font-size: 2em;
+        font-size: 1.4em;
     }
     .content form {
-        font-size: 1.8em;
+        font-size: 1.2em;
     }
     .content form input {
         font-size: 1em;
