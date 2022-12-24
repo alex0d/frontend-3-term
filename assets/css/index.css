@@ -295,11 +295,12 @@ body {
 
 @media (min-width: 1500px) {
     .intro_container > .intro_title {
-        font-size: 70px;
+        font-size: 79px;
+        padding-bottom: 2em;
     }
 
     .intro_container > .intro_content {
-        font-size: 35px;
+        font-size: 38px;
     }
 
     .spacer h3 {
