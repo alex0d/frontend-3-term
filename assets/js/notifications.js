@@ -53,5 +53,5 @@ $(function () {
     }
 
     changeNotification = notificationDecorator(changeNotification);
-    let intervalId  = setInterval(changeNotification,15000, 0);
+    let intervalId  = setInterval(changeNotification, 7000, 0);
 })
